@@ -23,8 +23,7 @@ JA_UD=1
 #Exit the program on quit? 0 yes, 1 no
 kioskmode=0
 #icon_count must match number of commands here.
-#There must also be corresponding ICON[012...].bmp files in pimenu
-directory
+#There must also be corresponding ICON[012...].bmp files in pimenu directory
 icon_count=5
 icon_command_0=/home/pi/mame4all-pi/mame
 icon_args_0=
