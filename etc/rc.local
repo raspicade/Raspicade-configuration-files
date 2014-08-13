@@ -26,10 +26,16 @@ if [ "$_IP" ]; then
   printf "My IP address is %s\n" "$_IP"
 fi
 
-#launch retrogame program to support mcp modules
+#Uncomment to retrogame 2 players for Brev2 (Hack)
 #/home/pi/Retrogame-2players/retrogame &
 
-#launch pikeyd deamon to support mcp modules
+#Uncomment to launch Raspicade-Retrogame-1Player fot Brev2 and B+
+#/home/pi/Raspicade-Retrogame-1Player/retrogame &
+
+#Uncomment to launch Raspicade-Retrogame-2Player-Bplus for B+ only
+#/home/pi/Raspicade-Retrogame-2Player-BPlus/retrogame &
+
+#Uncomment to launch pikeyd deamon to support mcp modules
 #/home/pi/pikeyd/pikeyd -d
 
 exit 0
