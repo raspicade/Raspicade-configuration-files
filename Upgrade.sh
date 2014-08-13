@@ -5,7 +5,7 @@ sudo apt-get update
 echo Apt-Get Upgrade
 sudo apt-get upgrade
 echo Install libSDL_mixer
-sudo apt-get install libsdl-mixer1.2
+sudo apt-get install libsdl-mixer1.2 alsa-oss
 echo Update Firmware and Kernel
 sudo rpi-update
 echo Downloading Updates
