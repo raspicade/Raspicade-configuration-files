@@ -22,6 +22,8 @@ JA_UD=1
 [General]
 #Exit the program on quit? 0 yes, 1 no
 kioskmode=0
+#PlayBackgroundSong? 0 = No, 1 = Yes (song named song.mp3 in pimenu directory)
+playbackgroundgsong=1
 #icon_count must match number of commands here.
 #There must also be corresponding ICON[012...].bmp files in pimenu directory
 icon_count=5
