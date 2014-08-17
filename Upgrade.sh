@@ -6,6 +6,7 @@ echo Apt-Get Upgrade
 sudo apt-get upgrade
 echo Install libSDL_mixer and libavcodec
 sudo apt-get install libsdl-mixer1.2 libavcodec53
+sudo apt-get install libboost-system1.49.0 libboost-filesystem1.49.0 libfreeimage3
 sudo apt-get remove --purge alsa-oss
 echo Update Firmware and Kernel
 sudo rpi-update
