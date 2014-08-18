@@ -12,8 +12,6 @@
 		<input name="select" type="key" id="304" value="1" />
 		<input name="up" type="key" id="273" value="1" />
 	</inputConfig>
-	<inputConfig type="joystick" deviceName="THT THT Arcade console 2P USB Player" />
-	<inputConfig type="keyboard" />
 	<inputConfig type="joystick" deviceName="Microsoft® Microsoft® SideWinder® Plug &amp; Play Game Pad">
 		<input name="a" type="button" id="0" value="1" />
 		<input name="b" type="button" id="1" value="1" />
@@ -38,7 +36,6 @@
 		<input name="select" type="button" id="3" value="1" />
 		<input name="up" type="axis" id="1" value="-1" />
 	</inputConfig>
-	<inputConfig type="keyboard" />
 	<inputConfig type="joystick" deviceName="THT THT Arcade console 2P USB Player">
 		<input name="a" type="button" id="3" value="1" />
 		<input name="b" type="button" id="4" value="1" />
