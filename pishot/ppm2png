@@ -1,0 +1,6 @@
+#!/bin/bash
+for i in `ls *.ppm`; do 
+	echo convert $i `basename $i .ppm`.png;
+	convert $i `basename $i .ppm`.png;  
+done
+rm *.ppm
