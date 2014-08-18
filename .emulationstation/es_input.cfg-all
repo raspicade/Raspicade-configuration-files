@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<inputList>
+	<inputConfig type="keyboard">
+		<input name="a" type="key" id="306" value="1" />
+		<input name="b" type="key" id="308" value="1" />
+		<input name="down" type="key" id="274" value="1" />
+		<input name="left" type="key" id="276" value="1" />
+		<input name="menu" type="key" id="32" value="1" />
+		<input name="pagedown" type="key" id="281" value="1" />
+		<input name="pageup" type="key" id="280" value="1" />
+		<input name="right" type="key" id="275" value="1" />
+		<input name="select" type="key" id="304" value="1" />
+		<input name="up" type="key" id="273" value="1" />
+	</inputConfig>
+	<inputConfig type="joystick" deviceName="THT THT Arcade console 2P USB Player" />
+	<inputConfig type="keyboard" />
+	<inputConfig type="joystick" deviceName="Microsoft® Microsoft® SideWinder® Plug &amp; Play Game Pad">
+		<input name="a" type="button" id="0" value="1" />
+		<input name="b" type="button" id="1" value="1" />
+		<input name="down" type="axis" id="1" value="1" />
+		<input name="left" type="axis" id="0" value="-1" />
+		<input name="menu" type="button" id="2" value="1" />
+		<input name="pagedown" type="button" id="5" value="1" />
+		<input name="pageup" type="button" id="4" value="1" />
+		<input name="right" type="axis" id="0" value="1" />
+		<input name="select" type="button" id="3" value="1" />
+		<input name="up" type="axis" id="1" value="-1" />
+	</inputConfig>
+	<inputConfig type="joystick" deviceName="Microsoft Microsoft SideWinder Plug &amp; Play Game Pad">
+		<input name="a" type="button" id="0" value="1" />
+		<input name="b" type="button" id="1" value="1" />
+		<input name="down" type="axis" id="1" value="1" />
+		<input name="left" type="axis" id="0" value="-1" />
+		<input name="menu" type="button" id="2" value="1" />
+		<input name="pagedown" type="button" id="5" value="1" />
+		<input name="pageup" type="button" id="4" value="1" />
+		<input name="right" type="axis" id="0" value="1" />
+		<input name="select" type="button" id="3" value="1" />
+		<input name="up" type="axis" id="1" value="-1" />
+	</inputConfig>
+	<inputConfig type="keyboard" />
+	<inputConfig type="joystick" deviceName="THT THT Arcade console 2P USB Player">
+		<input name="a" type="button" id="3" value="1" />
+		<input name="b" type="button" id="4" value="1" />
+		<input name="down" type="axis" id="1" value="1" />
+		<input name="left" type="axis" id="0" value="-1" />
+		<input name="menu" type="button" id="5" value="1" />
+		<input name="pagedown" type="button" id="2" value="1" />
+		<input name="pageup" type="button" id="1" value="1" />
+		<input name="right" type="axis" id="0" value="1" />
+		<input name="select" type="button" id="0" value="1" />
+		<input name="up" type="axis" id="1" value="-1" />
+	</inputConfig>
+</inputList>

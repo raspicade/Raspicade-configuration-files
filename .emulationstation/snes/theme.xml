@@ -1,0 +1,60 @@
+<theme>
+	<listPrimaryColor>E4E1E5</listPrimaryColor>
+	<descColor>48474D</descColor>
+	<listSelectorColor>3D32A6</listSelectorColor>
+	<hideHeader />
+	<hideDividers />
+	<listLeftAlign />
+
+	<gameImagePos>$infoWidth/2 0.18</gameImagePos>
+	<gameImageDim>$infoWidth 0</gameImageDim>
+	<gameImageOrigin>0.5 0</gameImageOrigin>
+
+        <component>
+                <type>image</type>
+                <path>./snes_art/snes_bg.png</path>
+                <pos>0 0</pos>
+                <dim>1 1</dim>
+		<tiled />
+        </component>
+
+        <component>
+                <type>image</type>
+                <path>./snes_art/snes_bg_grey.jpg</path>
+                <pos>0 .5</pos>
+                <dim>.5 1</dim>
+		<origin>0 .5</origin>
+        </component>
+
+        <component>
+                <type>image</type>
+                <path>./snes_art/snes_logo.png</path>
+                <pos>0 0</pos>
+                <dim>.5 0</dim>
+		<origin>0 0</origin>
+		<useAlpha />
+        </component>
+</theme>
+
+<basicTheme>
+	<listPrimaryColor>E4E1E5</listPrimaryColor>	
+	<listSelectorColor>3D32A6</listSelectorColor>
+	<hideHeader />
+	<hideDividers />
+
+	<component>
+		<type>image</type>
+		<path>./snes_art/snes_bg.png</path>
+		<pos>0 0</pos>
+		<dim>1 1</dim>
+		<tiled />		
+	</component>
+
+	<component>
+		<type>image</type>
+		<path>./snes_art/snes_logo_basic.png</path>
+		<pos>0.5 0</pos>
+		<dim>0 0.15</dim>
+		<origin>0.5 0</origin>
+	</component>
+</basicTheme>

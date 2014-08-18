@@ -1,0 +1,72 @@
+<theme>
+	<listPrimaryColor>333333</listPrimaryColor>
+	<listSecondaryColor>454492</listSecondaryColor>
+	<descColor>000000</descColor>
+	<listSelectorColor>FFFFFF</listSelectorColor>
+	<hideHeader />
+	<hideDividers />
+	<listLeftAlign />
+
+        <component>
+                <type>image</type>
+                <path>./gba_art/gba_bg_stripes.png</path>
+                <pos>0 0</pos>
+                <dim>1 1</dim>
+		<tiled />
+        </component>
+
+        <component>
+                <type>image</type>
+                <path>./gba_art/shadow.png</path>
+                <pos>1 0</pos>
+                <dim>.5 1</dim>
+		<origin>1 0</origin>
+        </component>
+
+        <component>
+                <type>image</type>
+                <path>./gba_art/gba_bg_left.jpg</path>
+                <pos>.25 0</pos>
+                <dim>.5 1</dim>
+		<origin>.5 0</origin>
+        </component>
+
+        <component>
+                <type>image</type>
+                <path>./gba_art/gba_logo.png</path>
+                <pos>.25 0</pos>
+                <dim>.4 0</dim>
+		<origin>.5 0</origin>
+        </component>
+</theme>
+
+<basicTheme>
+	<listPrimaryColor>333333</listPrimaryColor>
+	<listSecondaryColor>454492</listSecondaryColor>
+	<listSelectorColor>FFFFFF</listSelectorColor>
+	<hideHeader />
+
+	<component>
+		<type>image</type>
+		<path>./gba_art/gba_bg_stripes.png</path>
+		<pos>0 0</pos>
+		<dim>1 1</dim>
+		<tiled />
+	</component>
+
+	<component>
+		<type>image</type>
+		<path>./gba_art/shadow.png</path>
+		<pos>1 0</pos>
+		<dim>0.5 1</dim>
+		<origin>1 0</origin>
+	</component>
+
+	<component>
+		<type>image</type>
+		<path>./gba_art/gba_logo.png</path>
+		<pos>0.5 0</pos>
+		<dim>0 0.15</dim>
+		<origin>0.5 0</origin>
+	</component>
+</basicTheme>
