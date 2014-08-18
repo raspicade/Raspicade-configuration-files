@@ -4,13 +4,13 @@ echo Apt-Get Update
 sudo apt-get update
 echo Apt-Get Upgrade
 sudo apt-get upgrade
-echo Install libSDL_mixer
+echo Install libSDL_mixer and libavcodec
 sudo apt-get install libsdl-mixer1.2 libavcodec53
 sudo apt-get remove --purge alsa-oss
 echo Update Firmware and Kernel
 sudo rpi-update
-echo Downloading Updates
-git pull
+#echo Downloading Updates
+#git pull
 echo Making Updates
 cp -r Raspicade-Retrogame-1Player/ ~/
 cp -r Raspicade-Retrogame-2Player-BPlus/ ~/
