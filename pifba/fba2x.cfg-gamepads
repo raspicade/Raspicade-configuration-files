@@ -29,6 +29,9 @@ UP_2=114        #r
 DOWN_2=102      #f
 
 [Joystick]
+#1 = XinMoSupport, 0 = standard
+XinMoSupport=0
+
 # Get codes from "jstest /dev/input/js0"
 # from package "joystick"
 A_1=0
