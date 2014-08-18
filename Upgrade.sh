@@ -1,6 +1,8 @@
 #!/bin/bash
 today=`date +%Y-%m-%d.%H_%M_%S`
 echo Backup of old config files
+echo Backup of boot/config.txt
+sudo cp /boot/config.txt /boot/config.txt_$today
 echo For Mame
 cp /home/pi/mame4all-pi/mame.cfg /home/pi/mame4all-pi/mame.cfg_$today
 cp -r  /home/pi/mame4all-pi/cfg /home/pi/mame4all-pi/cfg_$today
@@ -39,6 +41,7 @@ cp .profile /home/pi/.profile
 cp -r Raspicade-Retrogame-1Player/ ~/
 cp -r Raspicade-Retrogame-2Player-BPlus/ ~/
 sudo cp boot/* /boot
+sudo cp boot/config.txt-4-3monitor1024x768 /boot/config.txt
 cp -r pimenu/* ~/pimenu/
 cp -r mame4all-pi/* ~/mame4all-pi/
 cp -r pifba/* ~/pifba/
