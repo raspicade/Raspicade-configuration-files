@@ -113,3 +113,6 @@ sdram_freq=450
 #force video mode in 1024x768 60Hz for pc monitor
 hdmi_group=2
 hdmi_mode=16
+
+gpu_mem_512=128
+force_turbo=1
