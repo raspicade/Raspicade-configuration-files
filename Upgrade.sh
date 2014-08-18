@@ -32,12 +32,12 @@ sudo rpi-update
 #echo Downloading Updates
 #git pull
 echo EmulationStation : Put scraper stuff in the good directory
-cp ES-scraper/mame_no_image.png /home/pi/mame4all-pi/roms
-cp ES-scraper/neogeo_no_image.png /home/pi/pifba/roms
-cp ES-scraper/neogeo_no_image.png  /home/pi/gngeo-pi/roms
-cp ES-scraper/snes_no_image.png  /home/pi/pisnes/roms
-cp ES-scraper/megadrive_no_image.png /home/pi/PicoDrive/romfelix
-cp ES-scraper/megadrive_no_image.png /home/pi/PicoDrive/roms
+cp ES-scraper/mame_no_image.png /home/pi/mame4all-pi/roms/no_image.png
+cp ES-scraper/neogeo_no_image.png /home/pi/pifba/roms/no_image.png
+cp ES-scraper/neogeo_no_image.png  /home/pi/gngeo-pi/roms/no_image.png
+cp ES-scraper/snes_no_image.png  /home/pi/pisnes/roms/no_image.png
+cp ES-scraper/megadrive_no_image.png /home/pi/PicoDrive/romfelix/no_image.png
+cp ES-scraper/megadrive_no_image.png /home/pi/PicoDrive/roms/no_image.png
 # launch : python ~/temp/Raspicade-configuration-files/ES-scraper/scraper.py -v -w 350
 # to generate gamelists.xml file in each rom directory
 echo Making Updates
