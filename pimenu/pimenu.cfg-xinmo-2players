@@ -26,7 +26,7 @@ kioskmode=0
 playbackgroundgsong=1
 #icon_count must match number of commands here.
 #There must also be corresponding ICON[012...].bmp files in pimenu directory
-icon_count=5
+icon_count=6
 icon_command_0=/home/pi/mame4all-pi/mame
 icon_args_0=
 icon_command_1=/home/pi/pifba/fbacapex
@@ -35,5 +35,7 @@ icon_command_2=/home/pi/gngeo-pi/bin/gngeo
 icon_args_2=-i ../roms
 icon_command_3=/home/pi/pisnes/snes9x.gui
 icon_args_3=
-icon_command_4=/home/pi/shutdown.sh
+icon_command_4=/home/pi/PicoDrive/PicoDrive
 icon_args_4=
+icon_command_5=/home/pi/shutdown.sh
+icon_args_5=
