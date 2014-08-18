@@ -17,6 +17,7 @@ cp -r  /home/pi/pifba/fba2x.cfg /home/pi/pifba/fba2x.cfg_$today
 echo For PiSnes
 cp -r  /home/pi/pisnes/snes9x.cfg  /home/pi/pisnes/snes9x.cfg_$today
 echo Upgrading Raspicade...
+read -rsp $'Press any key to continue...\n' -n1 key
 echo Apt-Get Update
 sudo apt-get update
 echo Apt-Get Upgrade
@@ -28,9 +29,34 @@ sudo apt-get install libboost-system1.49.0 libboost-filesystem1.49.0 libfreeimag
 sudo apt-get install python-imaging
 sudo apt-get remove --purge alsa-oss
 echo Update Firmware and Kernel
+read -rsp $'Press any key to continue...\n' -n1 key
 sudo rpi-update
 #echo Downloading Updates
 #git pull
+echo Copy new file in filesystem tree
+read -rsp $'Press any key to continue...\n' -n1 key
+cp .profile /home/pi/.profile
+cp -r Raspicade-Retrogame-1Player/ ~/
+cp -r Raspicade-Retrogame-2Player-BPlus/ ~/
+sudo cp boot/* /boot
+cp -r pimenu/* ~/pimenu/
+cp -r mame4all-pi/* ~/mame4all-pi/
+cp -r pifba/* ~/pifba/
+cp -r pisnes/* ~/pisnes/
+chmod 644 ~/.gngeo/gngeorc
+cp -r .gngeo/* ~/.gngeo/
+chmod 444 ~/.gngeo/gngeorc
+cp -r PicoDrive ~/
+cp -r .picodrive ~/
+cp -r dgen ~/
+cp -r .dgen ~/
+cp -r EmulationStation ~/
+cp -r .emulationstation ~/
+mkdir /home/pi/PicoDrive/romfelix
+chmod 777 /home/pi/PicoDrive/roms
+sudo cp etc/rc.local /etc/
+sudo cp etc/samba/smb.conf /etc/samba
+sudo service samba restart
 echo EmulationStation : Put scraper stuff in the good directory
 cp ES-scraper/mame_no_image.png /home/pi/mame4all-pi/roms/no_image.png
 cp ES-scraper/neogeo_no_image.png /home/pi/pifba/roms/no_image.png
@@ -52,24 +78,4 @@ echo To get GUI with Game images and description please run :
 echo python ~/temp/Raspicade-configuration-files/ES-scraper/scraper.py -v -w 350
 echo to download image files and generate gamelists.xml file in each rom directory
 echo **********************************************************************************
-read -rsp $'Press any key to continue...\n' -n1 key
-cp .profile /home/pi/.profile
-cp -r Raspicade-Retrogame-1Player/ ~/
-cp -r Raspicade-Retrogame-2Player-BPlus/ ~/
-sudo cp etc/rc.local /etc/
-sudo cp etc/samba/smb.conf /etc/samba
-sudo service samba restart
-sudo cp boot/* /boot
-cp -r pimenu/* ~/pimenu/
-cp -r mame4all-pi/* ~/mame4all-pi/
-cp -r pifba/* ~/pifba/
-cp -r pisnes/* ~/pisnes/
-chmod 644 ~/.gngeo/gngeorc
-cp -r .gngeo/* ~/.gngeo/
-chmod 444 ~/.gngeo/gngeorc
-cp -r PicoDrive ~/
-cp -r .picodrive ~/
-cp -r dgen ~/
-cp -r .dgen ~/
-cp -r EmulationStation ~/
-cp -r .emulationstation ~/
+read -rsp $'Press any key to finish...\n' -n1 key
