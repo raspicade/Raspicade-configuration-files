@@ -15,6 +15,8 @@ echo Making Updates
 cp -r Raspicade-Retrogame-1Player/ ~/
 cp -r Raspicade-Retrogame-2Player-BPlus/ ~/
 sudo cp etc/rc.local /etc/
+sudo cp etc/samba/smb.conf /etc/samba
+sudo service samba restart
 sudo cp boot/* /boot
 cp -r pimenu/* ~/pimenu/
 cp -r mame4all-pi/* ~/mame4all-pi/
@@ -23,4 +25,5 @@ cp -r pisnes/* ~/pisnes/
 chmod 644 ~/.gngeo/gngeorc
 cp -r .gngeo/* ~/.gngeo/
 chmod 444 ~/.gngeo/gngeorc
-cp -r PicoDrive ~/ 
+cp -r PicoDrive ~/
+cp -r .picodrive ~/
