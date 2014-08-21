@@ -6,7 +6,6 @@ echo Apt-Get Upgrade
 sudo apt-get upgrade
 echo Install libSDL_mixer and libavcodec
 sudo apt-get install libsdl-mixer1.2 libavcodec53
-<<<<<<< HEAD
 #EmulationStation
 sudo apt-get install libboost-system1.49.0 libboost-filesystem1.49.0 libfreeimage3
 sudo apt-get install python-imaging
@@ -31,3 +30,7 @@ cp -r .gngeo/* ~/.gngeo/
 chmod 444 ~/.gngeo/gngeorc
 cp -r PicoDrive ~/
 cp -r .picodrive ~/
+cp -r dgen ~/
+cp -r .dgen ~/
+cp -r EmulationStation ~/
+cp -r .emulationstation ~/
