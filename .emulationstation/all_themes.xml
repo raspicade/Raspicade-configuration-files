@@ -1,0 +1,9 @@
+<theme>
+    <formatVersion>3</formatVersion>
+    <view name="detailed">
+        <text name="description">
+            <fontPath>./all_themes/myfont.ttf</fontPath>
+            <color>00FF00</color>
+        </text>
+    </view>
+</theme>

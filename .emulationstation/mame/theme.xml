@@ -1,0 +1,56 @@
+<theme>
+	<listPrimaryColor>3EDEF4</listPrimaryColor>
+	<descColor>80F9FF</descColor>
+	<listSelectorColor>06333B</listSelectorColor>
+	<hideHeader />
+	<hideDividers />
+	<listLeftAlign />
+
+	<gameImagePos>$infoWidth/2 0.175</gameImagePos>
+
+        <component>
+                <type>image</type>
+                <path>./mame_art/mame_bg_black.jpg</path>
+                <pos>0 0</pos>
+                <dim>1 1</dim>
+		<tiled />
+        </component>
+
+        <component>
+                <type>image</type>
+                <path>./mame_art/mame_bg.jpg</path>
+                <pos>.25 1</pos>
+                <dim>.5 0</dim>
+		<origin>.5 1</origin>
+        </component>
+
+        <component>
+                <type>image</type>
+                <path>./mame_art/mame_logo.jpg</path>
+                <pos>.25 0</pos>
+                <dim>.5 0</dim>
+		<origin>.5 0</origin>
+        </component>
+</theme>
+
+<basicTheme>
+	<listPrimaryColor>3EDEF4</listPrimaryColor>
+	<listSelectorColor>06333B</listSelectorColor>
+	<hideHeader />
+
+	<component>
+		<type>image</type>
+		<path>./mame_art/mame_bg_black.jpg</path>
+		<pos>0 0</pos>
+		<dim>1 1</dim>
+		<tiled />
+	</component>
+
+	<component>
+		<type>image</type>
+		<path>./mame_art/mame_logo.jpg</path>
+		<pos>0.5 0</pos>
+		<dim>0 0.15</dim>
+		<origin>0.5 0</origin>
+	</component>
+</basicTheme>

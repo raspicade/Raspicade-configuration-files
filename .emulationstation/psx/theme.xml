@@ -1,0 +1,64 @@
+<theme>
+	<listPrimaryColor>222222</listPrimaryColor>
+	<descColor>222222</descColor>
+	<listSelectorColor>aaaaaa</listSelectorColor>
+	<fastSelectColor>00FF00</fastSelectColor>
+	<hideHeader />
+	<hideDividers />
+	<listLeftAlign />
+
+	<gameImagePos>$infoWidth/2 0.18</gameImagePos>
+
+        <component>
+                <type>image</type>
+                <path>./psx_art/psx_bg.jpg</path>
+                <pos>0 0</pos>
+                <dim>1 1</dim>
+		<origin>0 0</origin>
+		<tiled />
+        </component>
+
+        <component>
+                <type>image</type>
+                <path>./psx_art/psx_divider.png</path>
+                <pos>.5 .5</pos>
+                <dim>.01 1</dim>
+		<origin>.5 .5</origin>
+		<useAlpha />
+        </component>
+
+        <component>
+                <type>image</type>
+                <path>./psx_art/psx_logo.png</path>
+                <pos>.25 0</pos>
+                <dim>0 .18</dim>
+		<origin>.5 0</origin>
+		<useAlpha />
+        </component>
+
+</theme>
+
+<basicTheme>
+	<listPrimaryColor>222222</listPrimaryColor>
+	<listSecondaryColor>de0029</listSecondaryColor>
+	<listSelectorColor>aaaaaa</listSelectorColor>
+	<fastSelectColor>00FF00</fastSelectColor>
+
+	<hideHeader />
+
+	<component>
+		<type>image</type>
+		<path>./psx_art/psx_bg.jpg</path>
+		<pos>0 0</pos>
+		<dim>1 1</dim>
+		<tiled />
+	</component>
+
+	<component>
+		<type>image</type>
+		<path>./psx_art/psx_logo.png</path>
+		<pos>0.5 0</pos>
+		<dim>0 0.15</dim>
+		<origin>0.5 0</origin>
+	</component>
+</basicTheme>

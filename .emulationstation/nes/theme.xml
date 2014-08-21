@@ -1,0 +1,64 @@
+<theme>
+	<listPrimaryColor>A61600</listPrimaryColor>
+	<descColor>DDDDDD</descColor>
+	<listSelectorColor>818181</listSelectorColor>
+	<hideHeader />
+	<hideDividers />
+	<listLeftAlign />
+
+	<gameImagePos>$infoWidth/2 0.165</gameImagePos>
+
+        <component>
+                <type>image</type>
+                <path>./nes_art/nes_bg_stripes.png</path>
+                <pos>0 0</pos>
+                <dim>1 1</dim>
+		<tiled />
+        </component>
+
+        <component>
+                <type>image</type>
+                <path>./nes_art/nes_bg_grey.jpg</path>
+                <pos>0 .5</pos>
+                <dim>.5 1</dim>
+		<origin>0 .5</origin>
+        </component>
+
+        <component>
+                <type>image</type>
+                <path>./nes_art/nes_logo.png</path>
+                <pos>0 0</pos>
+                <dim>.5 0</dim>
+		<origin>0 0</origin>
+		<useAlpha />
+        </component>
+</theme>
+
+<basicTheme>
+	<listPrimaryColor>A61600</listPrimaryColor>
+	<listSelectorColor>818181</listSelectorColor>
+	<hideHeader />
+
+	<component>
+		<type>image</type>
+		<path>./nes_art/nes_bg_stripes.png</path>
+		<pos>0 0</pos>
+		<dim>1 1</dim>
+		<tiled />
+	</component>
+
+	<component>
+		<type>image</type>
+		<path>./nes_art/nes_bg_grey.jpg</path>
+		<pos>0 0</pos>
+		<dim>1 0.15</dim>
+	</component>
+
+	<component>
+		<type>image</type>
+		<path>./nes_art/nes_logo.png</path>
+		<pos>0.5 0</pos>
+		<dim>0 0.15</dim>
+		<origin>0.5 0</origin>
+	</component>
+</basicTheme>
