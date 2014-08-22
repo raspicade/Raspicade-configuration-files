@@ -351,18 +351,32 @@ def scanFiles(SystemInfo):
                     data=getGameInfo(filepath, platformID)
      
                     if data is None:
-                        continue
+                        #continue
+                        print "game not in database"
+                        str_title=filename
+                        str_des="No Description Available."
+                        str_img=None
+                        str_rd="No Date"
+                        str_pub="No Publisher"
+                        str_dev="No Developper"
+                        lst_genres=None
                     else:
                         result=data
-    
-                    str_title=getTitle(result)
+                        str_title=getTitle(result)
+                        str_des=getDescription(result)
+                        str_img=getImage(result)
+                        str_rd=getRelDate(result)
+                        str_pub=getPublisher(result)
+                        str_dev=getDeveloper(result)
+                        lst_genres=getGenres(result)
+
+                    """str_title=getTitle(result)
                     str_des=getDescription(result)
                     str_img=getImage(result)
                     str_rd=getRelDate(result)
                     str_pub=getPublisher(result)
                     str_dev=getDeveloper(result)
-                    lst_genres=getGenres(result)
-    
+                    lst_genres=getGenres(result)"""
                     if str_title is not None:
                         game = SubElement(gamelist, 'game')
                         path = SubElement(game, 'path')
@@ -376,7 +390,7 @@ def scanFiles(SystemInfo):
     
                         path.text=filepath
                         name.text=str_title
-                        print "Game Found: %s" % str_title
+                        print "Game Name Found: %s" % str_title
     
                     if str_des is not None:
                         desc.text=str_des
@@ -398,6 +412,14 @@ def scanFiles(SystemInfo):
                                 resizeImage(Image.open(imgpath),imgpath)
                             except:
                                 print "Image resize error"
+                    else:
+                        print "no image"
+			if args.newpath is True:
+                            imgpath="./" + "no_image.png"
+                        else:
+                            imgpath=os.path.abspath(os.path.join(root, "no_image.png"))
+			imgpath=fixExtension(imgpath)
+                        image.text=imgpath
     
                     if str_rd is not None:
                         releasedate.text=str_rd

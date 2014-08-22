@@ -3,11 +3,11 @@
 # Path to dynamicly load opengl (only used for the opengl blitter)
 #libglpath /usr/lib/libGL.so
 
-#o Where your rom are?
+# Where your rom are?
 rompath /home/pi/gngeo-pi/roms
 
 # Where did you put yout neogeo.zip bios file?
-biospath /home/pi/gngeo-pi/roms
+biospath /home/pi/gngeo-pi/bios
 
 # Where gngeo can find its datafile (font/skin/etc.)
 datafile /home/pi/gngeo-pi/share/gngeo/gngeo_data.zip

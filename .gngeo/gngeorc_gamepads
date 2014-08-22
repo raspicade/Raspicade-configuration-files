@@ -7,7 +7,7 @@
 rompath /home/pi/gngeo-pi/roms
 
 # Where did you put yout neogeo.zip bios file?
-biospath /home/pi/gngeo-pi/roms
+biospath /home/pi/gngeo-pi/bios
 
 # Where gngeo can find its datafile (font/skin/etc.)
 datafile /home/pi/gngeo-pi/share/gngeo/gngeo_data.zip
