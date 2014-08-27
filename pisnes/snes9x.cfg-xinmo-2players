@@ -65,7 +65,7 @@ JA_LR_2=2
 JA_UD_2=3
 
 #XinMo (0=False, 1=True)
-XinMoEnabled=0
+XinMoEnabled=1
 
 [Graphics]
 DisplaySmoothStretch=0
