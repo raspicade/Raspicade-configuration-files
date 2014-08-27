@@ -1,4 +1,27 @@
 #!/bin/bash
+today=`date +%Y-%m-%d.%H_%M_%S`
+echo *********************WARNING*********************************************************
+echo New gngeo config files!!!! Creating /home/pi/gngeo-pi/bios directory. 
+echo Please put/move your neogeo.zip bios file in it
+echo *************************************************************************************
+read -rsp $'Press any key to continue...\n' -n1 key
+mkdir /home/pi/gngeo-pi/bios
+echo Backup of old config files
+echo For Mame
+cp /home/pi/mame4all-pi/mame.cfg /home/pi/mame4all-pi/mame.cfg_$today
+cp -r  /home/pi/mame4all-pi/cfg /home/pi/mame4all-pi/cfg_$today
+echo For Gngeo
+cp -r /home/pi/.gngeo /home/pi/.gngeo_$today
+echo For Dgen
+cp -r /home/pi/.dgen /home/pi/.dgen_$today
+echo For EmulationStation
+cp -r /home/pi/.emulationstation /home/pi/.emulationstation_$today
+echo For Picodrive
+cp -r /home/pi/.picodrive /home/pi/.picodrive_$today
+echo For PiFBA
+cp -r  /home/pi/pifba/fba2x.cfg /home/pi/pifba/fba2x.cfg_$today
+echo For PiSnes
+cp -r  /home/pi/pisnes/snes9x.cfg  /home/pi/pisnes/snes9x.cfg_$today
 echo Upgrading Raspicade...
 echo Apt-Get Update
 sudo apt-get update
@@ -14,7 +37,29 @@ echo Update Firmware and Kernel
 sudo rpi-update
 #echo Downloading Updates
 #git pull
+echo EmulationStation : Put scraper stuff in the good directory
+cp ES-scraper/mame_no_image.png /home/pi/mame4all-pi/roms
+cp ES-scraper/neogeo_no_image.png /home/pi/pifba/roms
+cp ES-scraper/neogeo_no_image.png  /home/pi/gngeo-pi/roms
+cp ES-scraper/snes_no_image.png  /home/pi/pisnes/roms
+cp ES-scraper/megadrive_no_image.png /home/pi/PicoDrive/romfelix
+cp ES-scraper/megadrive_no_image.png /home/pi/PicoDrive/roms
+# launch : python ~/temp/Raspicade-configuration-files/ES-scraper/scraper.py -v -w 350
+# to generate gamelists.xml file in each rom directory
 echo Making Updates
+echo **********************************************************************************
+echo Default New GUI : EmulationEtation. File .profile is modified
+echo If you want the pimenu emulator selector please edit /home/pi/.profile file:
+echo comment echo && echo "Starting EmulationStation" && echo
+echo comment /home/pi/EmulationStation/emulationstation --gamelist-only
+echo uncomment echo && echo "Starting PIMENU" && echo
+echo uncomment /home/pi/pimenu/pimenu
+echo To get GUI with Game images and description please run :
+echo python ~/temp/Raspicade-configuration-files/ES-scraper/scraper.py -v -w 350
+echo to download image files and generate gamelists.xml file in each rom directory
+echo **********************************************************************************
+read -rsp $'Press any key to continue...\n' -n1 key
+cp .profile /home/pi/.profile
 cp -r Raspicade-Retrogame-1Player/ ~/
 cp -r Raspicade-Retrogame-2Player-BPlus/ ~/
 sudo cp etc/rc.local /etc/
