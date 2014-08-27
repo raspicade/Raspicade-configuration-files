@@ -1,4 +1,8 @@
 <theme>
+    <menuScrollSound>./../sounds/GS25.wav</menuScrollSound>
+    <menuSelectSound>./../sounds/GS42.wav</menuSelectSound>
+    <menuBackSound>./../sounds/GS28.wav</menuBackSound>
+    <menuOpenSound>./../sounds/SNES5.wav</menuOpenSound>
 	<listPrimaryColor>3EDEF4</listPrimaryColor>
 	<descColor>80F9FF</descColor>
 	<listSelectorColor>06333B</listSelectorColor>
