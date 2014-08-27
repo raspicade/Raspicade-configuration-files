@@ -1,11 +1,5 @@
 #!/bin/bash
 today=`date +%Y-%m-%d.%H_%M_%S`
-echo *********************WARNING*********************************************************
-echo New gngeo config files!!!! Creating /home/pi/gngeo-pi/bios directory. 
-echo Please put/move your neogeo.zip bios file in it
-echo *************************************************************************************
-read -rsp $'Press any key to continue...\n' -n1 key
-mkdir /home/pi/gngeo-pi/bios
 echo Backup of old config files
 echo For Mame
 cp /home/pi/mame4all-pi/mame.cfg /home/pi/mame4all-pi/mame.cfg_$today
