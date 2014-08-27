@@ -62,6 +62,9 @@ SELECT_2=5
 JA_LR_2=0
 JA_UD_2=1
 
+#XinMo (0=False, 1=True)
+XinMoEnabled=0
+
 [Graphics]
 DisplaySmoothStretch=0
 # Display Effect: 0 none, 1 scanlines, 2 phospher
