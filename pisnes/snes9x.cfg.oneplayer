@@ -30,6 +30,10 @@ RIGHT_2=103     #g
 UP_2=114        #r
 DOWN_2=102      #f
 ACCEL=9         #tab
+[Joystick]
+
+#XinMo (0=False, 1=True)
+XinMoEnabled=0
 
 [Graphics]
 DisplaySmoothStretch=0
