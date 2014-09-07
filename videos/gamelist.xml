@@ -2,22 +2,32 @@
 <gameList>
 	<game>
 		<path>/home/pi/videos/microcab_raspicade720LD.mp4</path>
-		<name>microcab_raspicade720LD</name>
+		<name>Microcab Jeutel</name>
 		<desc>Le but de ce petit projet est de realiser une micro borne de la forme d'une borne Jeutel, en utilisant un ecran cathodique couleur de 15cm de diagonale. On utilisera bien sur raspicade pour la partie software et raspberry pi pour la partie hardware informatique.</desc>
 		<image>/home/pi/videos/microborne.png</image>
 		<rating>0.000000</rating>
 		<userrating>0.000000</userrating>
-		<timesplayed>2</timesplayed>
-		<lastplayed>1410664113</lastplayed>
+		<timesplayed>12</timesplayed>
+		<lastplayed>1410669249</lastplayed>
 	</game>
 	<game>
 		<path>/home/pi/videos/raspicade-xinmo720LD.mp4</path>
-		<name>raspicade-xinmo720LD</name>
+		<name>Presentation Raspicade</name>
 		<desc>A distribution full configured for retrogaming on Raspberry (256, 512B and the latest 512B+ models are supported). It is based on Moebius Linux and uses 4 emulators optimized for Raspberry Pi : Mame4all-pi, piFBA, pi-SNES9x, Dgen and Picodrive. It starts automatically on EmulationStation allowing the choice of the emulator and games. It fully supports the XinMo 2 players arcade module in all installed emulators. They have been patched to fully support 2 players/Xin-Mo arcade module. Raspicade is fully supporting keyboard or keyboard encoder (like IPAC, Kade http://kadevice.com/ or pikeydx32 http://atmjoy.com/pikeyd-pi-gpio-keyboard-daemon-i2c-mcp3017/ with pikeyd daemon). Last B+ GPIO is supported too (see wiki for details). Keys are the same for all emulators and are based on the Mame default key mapping. Raspicade users, post links of your cab pictures in the discussion page. If you like the project, consider Donate on the wiki page https://sourceforge.net/p/raspicade/wiki/HowTo</desc>
 		<image>/home/pi/videos/raspicade.png</image>
 		<rating>0.000000</rating>
 		<userrating>0.000000</userrating>
-		<timesplayed>3</timesplayed>
-		<lastplayed>1410664294</lastplayed>
+		<timesplayed>8</timesplayed>
+		<lastplayed>1410106005</lastplayed>
+	</game>
+	<game>
+		<path>/home/pi/videos/scoobycabProject720LD.mp4</path>
+		<name>Projet ScoobyCab</name>
+		<desc>Cette video presente la revovation d'une borne Jeutel en ScoobyCab. La partie logicielle est assuree par Linux et Wahcade</desc>
+		<image>/home/pi/videos/bornescooby.png</image>
+		<rating>0.000000</rating>
+		<userrating>0.000000</userrating>
+		<timesplayed>4</timesplayed>
+		<lastplayed>1410665787</lastplayed>
 	</game>
 </gameList>
