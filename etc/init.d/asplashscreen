@@ -37,7 +37,7 @@ do_start () {
     else
         printf "$audioconffile dos not exists"
     fi
-    omxplayer -o $audioout /home/pi/splashvideo.mp4 &
+    omxplayer -b -o $audioout /home/pi/splashvideo.mp4 &
     exit 0
 }
  
