@@ -24,6 +24,7 @@ echo Apt-Get Update
 sudo apt-get update
 echo Apt-Get Upgrade
 sudo apt-get upgrade
+sudo apt-get clean
 echo Install libSDL_mixer and libavcodec
 sudo apt-get install libsdl-mixer1.2 libavcodec53
 #EmulationStation
