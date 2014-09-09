@@ -58,8 +58,10 @@ cp -r .emulationstation ~/
 mkdir /home/pi/PicoDrive/romfelix
 chmod 777 /home/pi/PicoDrive/roms
 cp -r videos/ ~/
+chmod 777 ~/videos
 mkdir /home/pi/joy2key
 cp joy2key-code/joy2key /home/pi/joy2key
+cp playvideo.sh /home/pi/joy2key
 cp omxplayer_keys.rc /home/pi
 sudo cp etc/rc.local /etc/
 sudo cp etc/samba/smb.conf /etc/samba
