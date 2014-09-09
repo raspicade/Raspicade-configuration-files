@@ -99,6 +99,7 @@ def getFiles(base):
     return dict
 
 def getGameInfo(file,platformID):
+    global GAMENAME
     title=re.sub(r'\[.*?\]|\(.*?\)', '', os.path.splitext(os.path.basename(file))[0]).strip()
     if args.crc:
         crcvalue=crc(file)
@@ -115,20 +116,26 @@ def getGameInfo(file,platformID):
         if SCUMMVM: 
             title = getScummvmTitle(title)
             args.fix = True #Scummvm doesn't have a proper platformID so we search all
-        if platform == "Arcade" or platform == "NeoGeo": title = getRealArcadeTitle(title)		
-        
+        if platform == "Arcade" or platform == "NeoGeo": 
+		title = getRealArcadeTitle(title)		
+       	
+	print "ArcadeTitle = "+title
+	GAMENAME = title
+
         if args.fix:
             try:                
                 fixreq = urllib2.Request("http://thegamesdb.net/api/GetGamesList.php", urllib.urlencode({'name' : title, 'platform' : platform}), headers={'User-Agent' : "RetroPie Scraper Browser"})
                 fixdata=ET.parse(urllib2.urlopen(fixreq)).getroot()
                 if fixdata.find("Game") is not None:        
-
                     #values={ 'id': fixdata.findall("Game/id")[chooseResult(fixdata)].text if args.m else fixdata.find("Game/id").text }
                     values={ 'id': fixdata.findall("Game/id")[chooseResult(fixdata)].text if args.m else fixdata.findall("Game/id")[autoChooseBestResult(fixdata,title)].text }
 					
             except:
-                return None
+		#print "arg.fix except!!!!"
+		return None
+		
         else:
+	    #print "arg.fix else!!!!"
             values={'name':title,'platform':platform}
 
     try:
@@ -147,6 +154,7 @@ def getGameInfo(file,platformID):
         elif data.find("Game") is not None:
             return data.findall("Game")[chooseResult(data)] if args.m else data.findall("Game")[autoChooseBestResult(data,title)]
         else:
+	    #print "arg.crc else!!!!"
             return None
     except Exception, err:
         print "Skipping game..(%s)" % str(err)
@@ -297,6 +305,7 @@ def autoChooseBestResult(nodes,t):
         return 0
 
 def scanFiles(SystemInfo):
+    global GAMENAME
     name=SystemInfo[0]
     if name == "scummvm":
         global SCUMMVM
@@ -349,11 +358,13 @@ def scanFiles(SystemInfo):
                     print "Trying to identify %s.." % files
     
                     data=getGameInfo(filepath, platformID)
+		    print "GAMENAME = "+GAMENAME
      
                     if data is None:
                         #continue
-                        print "game not in database"
-                        str_title=filename
+                        print "Game not in database but name found = "+GAMENAME
+	                #str_title=filename
+	                str_title=GAMENAME
                         str_des="No Description Available."
                         str_img=None
                         str_rd="No Date"
