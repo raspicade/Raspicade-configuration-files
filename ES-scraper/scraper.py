@@ -72,7 +72,7 @@ def indent(elem, level=0):
 
 def getPlatformName(id):
     url = "http://thegamesdb.net/api/GetPlatform.php"
-    req = urllib2.Request(url, urllib.urlencode({'id':id}), headers={'User-Agent' : "RetroPie Scraper Browser"})
+    req = urllib2.Request(url, urllib.urlencode({'id':id}), headers={'User-Agent' : "Raspicade Scraper Browser"})
     data = urllib2.urlopen( req )
     platform_data = ET.parse(data)
     return platform_data.find('Platform/Platform').text
@@ -101,6 +101,7 @@ def getFiles(base):
 def getGameInfo(file,platformID):
     global GAMENAME
     title=re.sub(r'\[.*?\]|\(.*?\)', '', os.path.splitext(os.path.basename(file))[0]).strip()
+    print "title = "+title
     if args.crc:
         crcvalue=crc(file)
         if args.v:
@@ -112,6 +113,7 @@ def getGameInfo(file,platformID):
         values={}
     else:
         URL = "http://thegamesdb.net/api/GetGame.php"
+	print "platform = " + platformID
         platform = getPlatformName(platformID)
         if SCUMMVM: 
             title = getScummvmTitle(title)
