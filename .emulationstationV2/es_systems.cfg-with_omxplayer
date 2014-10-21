@@ -1,0 +1,215 @@
+<!-- This is the EmulationStation Systems configuration file.
+All systems must be contained within the <systemList> tag.-->
+
+<systemList>
+    <!-- Here's an example system to get you started. -->
+    <system>
+        <!-- A short name, used internally. -->
+        <name>mame</name>
+
+        <!-- A "pretty" name, displayed in the menus and such. This one is optional. -->
+        <fullname>MAME Multiple Arcade Machine Emulator</fullname>
+
+        <!-- The path to start searching for ROMs in. '~' will be expanded to $HOME or %HOMEPATH%, depending on platform. 
+        All subdirectories (and non-recursive links) will be included. -->
+        <path>/home/pi/mame4all-pi/roms</path>
+
+        <!-- A list of extensions to search for, delimited by any of the whitespace characters (", \r\n\t").
+        You MUST include the period at the start of the extension! It's also case sensitive. -->
+        <extension>.zip .ZIP</extension>
+
+        <!-- The shell command executed when a game is selected. A few special tags are replaced if found in a command, like %ROM% (see below). -->
+        <command>/home/pi/mame4all-pi/mame %BASENAME%</command>
+        <!-- This example would run the bash command "snesemulator /home/user/roms/snes/Super\ Mario\ World.sfc". -->
+
+        <!-- The platform(s) to use when scraping. You can see the full list of accepted platforms in src/PlatformIds.cpp.
+        It's case sensitive, but everything is lowercase. This tag is optional.
+        You can use multiple platforms too, delimited with any of the whitespace characters (", \r\n\t"), eg: "genesis, megadrive" -->
+        <platform>mame</platform>
+
+        <!-- The theme to load from the current theme set. See THEMES.md for more information.
+        This tag is optional; if not set, it will use the value of <name>. -->
+        <theme>mame</theme>
+    </system>
+
+    <!-- Here's an example system to get you started. -->
+    <system>
+        <!-- A short name, used internally. -->
+        <name>neogeopifba</name>
+
+        <!-- A "pretty" name, displayed in the menus and such. This one is optional. -->
+        <fullname>piFBA Finale Burn Alpha</fullname>
+
+        <!-- The path to start searching for ROMs in. '~' will be expanded to $HOME or %HOMEPATH%, depending on platform. 
+        All subdirectories (and non-recursive links) will be included. -->
+        <path>/home/pi/pifba/roms</path>
+
+        <!-- A list of extensions to search for, delimited by any of the whitespace characters (", \r\n\t").
+        You MUST include the period at the start of the extension! It's also case sensitive. -->
+        <extension>.zip .ZIP</extension>
+
+        <!-- The shell command executed when a game is selected. A few special tags are replaced if found in a command, like %ROM% (see below). -->
+        <command>/home/pi/pifba/fba2x %ROM%</command>
+        <!-- This example would run the bash command "snesemulator /home/user/roms/snes/Super\ Mario\ World.sfc". -->
+
+        <!-- The platform(s) to use when scraping. You can see the full list of accepted platforms in src/PlatformIds.cpp.
+        It's case sensitive, but everything is lowercase. This tag is optional.
+        You can use multiple platforms too, delimited with any of the whitespace characters (", \r\n\t"), eg: "genesis, megadrive" -->
+        <platform>neogeo</platform>
+
+        <!-- The theme to load from the current theme set. See THEMES.md for more information.
+        This tag is optional; if not set, it will use the value of <name>. -->
+        <theme>neogeo</theme>
+    </system>
+
+    <!-- Here's an example system to get you started. -->
+    <system>
+        <!-- A short name, used internally. -->
+        <name>neogeogngeo</name>
+
+        <!-- A "pretty" name, displayed in the menus and such. This one is optional. -->
+        <fullname>GnGeo Neogeo Emulator</fullname>
+
+        <!-- The path to start searching for ROMs in. '~' will be expanded to $HOME or %HOMEPATH%, depending on platform. 
+        All subdirectories (and non-recursive links) will be included. -->
+        <path>/home/pi/gngeo-pi/roms</path>
+
+        <!-- A list of extensions to search for, delimited by any of the whitespace characters (", \r\n\t").
+        You MUST include the period at the start of the extension! It's also case sensitive. -->
+        <extension>.zip .ZIP</extension>
+
+        <!-- The shell command executed when a game is selected. A few special tags are replaced if found in a command, like %ROM% (see below). -->
+        <command>/home/pi/gngeo-pi/bin/gngeo %ROM%</command>
+        <!-- This example would run the bash command "snesemulator /home/user/roms/snes/Super\ Mario\ World.sfc". -->
+
+        <!-- The platform(s) to use when scraping. You can see the full list of accepted platforms in src/PlatformIds.cpp.
+        It's case sensitive, but everything is lowercase. This tag is optional.
+        You can use multiple platforms too, delimited with any of the whitespace characters (", \r\n\t"), eg: "genesis, megadrive" -->
+        <platform>neogeo</platform>
+
+        <!-- The theme to load from the current theme set. See THEMES.md for more information.
+        This tag is optional; if not set, it will use the value of <name>. -->
+        <theme>neogeo</theme>
+    </system>
+
+    <!-- Here's an example system to get you started. -->
+    <system>
+        <!-- A short name, used internally. -->
+        <name>snes</name>
+
+        <!-- A "pretty" name, displayed in the menus and such. This one is optional. -->
+        <fullname>piSNES Super Nintendo Emulator</fullname>
+
+        <!-- The path to start searching for ROMs in. '~' will be expanded to $HOME or %HOMEPATH%, depending on platform. 
+        All subdirectories (and non-recursive links) will be included. -->
+        <path>/home/pi/pisnes/roms</path>
+
+        <!-- A list of extensions to search for, delimited by any of the whitespace characters (", \r\n\t").
+        You MUST include the period at the start of the extension! It's also case sensitive. -->
+        <extension>.zip .ZIP</extension>
+
+        <!-- The shell command executed when a game is selected. A few special tags are replaced if found in a command, like %ROM% (see below). -->
+        <command>/home/pi/pisnes/snes9x %ROM%</command>
+        <!-- This example would run the bash command "snesemulator /home/user/roms/snes/Super\ Mario\ World.sfc". -->
+
+        <!-- The platform(s) to use when scraping. You can see the full list of accepted platforms in src/PlatformIds.cpp.
+        It's case sensitive, but everything is lowercase. This tag is optional.
+        You can use multiple platforms too, delimited with any of the whitespace characters (", \r\n\t"), eg: "genesis, megadrive" -->
+        <platform>snes</platform>
+
+        <!-- The theme to load from the current theme set. See THEMES.md for more information.
+        This tag is optional; if not set, it will use the value of <name>. -->
+        <theme>snes</theme>
+    </system>
+
+    <!-- Here's an example system to get you started. -->
+    <system>
+        <!-- A short name, used internally. -->
+        <name>picodrive</name>
+
+        <!-- A "pretty" name, displayed in the menus and such. This one is optional. -->
+        <fullname>PicoDrive MegaDrive Emulator</fullname>
+
+        <!-- The path to start searching for ROMs in. '~' will be expanded to $HOME or %HOMEPATH%, depending on platform. 
+        All subdirectories (and non-recursive links) will be included. -->
+        <path>/home/pi/PicoDrive/romfelix</path>
+
+        <!-- A list of extensions to search for, delimited by any of the whitespace characters (", \r\n\t").
+        You MUST include the period at the start of the extension! It's also case sensitive. -->
+        <extension>.zip .ZIP .smd .bin</extension>
+
+        <!-- The shell command executed when a game is selected. A few special tags are replaced if found in a command, like %ROM% (see below). -->
+        <command>/home/pi/PicoDrive/PicoDriveOneRom %ROM%</command>
+        <!-- This example would run the bash command "snesemulator /home/user/roms/snes/Super\ Mario\ World.sfc". -->
+
+        <!-- The platform(s) to use when scraping. You can see the full list of accepted platforms in src/PlatformIds.cpp.
+        It's case sensitive, but everything is lowercase. This tag is optional.
+        You can use multiple platforms too, delimited with any of the whitespace characters (", \r\n\t"), eg: "genesis, megadrive" -->
+        <platform>megadrive</platform>
+
+        <!-- The theme to load from the current theme set. See THEMES.md for more information.
+        This tag is optional; if not set, it will use the value of <name>. -->
+        <theme>megadrive</theme>
+    </system>
+
+    <!-- Here's an example system to get you started. -->
+    <system>
+        <!-- A short name, used internally. -->
+        <name>dgen</name>
+
+        <!-- A "pretty" name, displayed in the menus and such. This one is optional. -->
+        <fullname>DGEN MegaDrive Emulator</fullname>
+
+        <!-- The path to start searching for ROMs in. '~' will be expanded to $HOME or %HOMEPATH%, depending on platform. 
+        All subdirectories (and non-recursive links) will be included. -->
+        <path>/home/pi/PicoDrive/roms</path>
+
+        <!-- A list of extensions to search for, delimited by any of the whitespace characters (", \r\n\t").
+        You MUST include the period at the start of the extension! It's also case sensitive. -->
+        <extension>.zip .ZIP .smd .bin</extension>
+
+        <!-- The shell command executed when a game is selected. A few special tags are replaced if found in a command, like %ROM% (see below). -->
+        <command>/home/pi/dgen/bin/dgen %ROM%</command>
+        <!-- This example would run the bash command "snesemulator /home/user/roms/snes/Super\ Mario\ World.sfc". -->
+
+        <!-- The platform(s) to use when scraping. You can see the full list of accepted platforms in src/PlatformIds.cpp.
+        It's case sensitive, but everything is lowercase. This tag is optional.
+        You can use multiple platforms too, delimited with any of the whitespace characters (", \r\n\t"), eg: "genesis, megadrive" -->
+        <platform>megadrive</platform>
+
+        <!-- The theme to load from the current theme set. See THEMES.md for more information.
+        This tag is optional; if not set, it will use the value of <name>. -->
+        <theme>megadrive</theme>
+    </system>
+
+    <!-- Here's an example system to get you started. -->
+    <system>
+        <!-- A short name, used internally. -->
+        <name>omxplayer</name>
+
+        <!-- A "pretty" name, displayed in the menus and such. This one is optional. -->
+        <fullname>OMXPlayer multimedia player</fullname>
+
+        <!-- The path to start searching for ROMs in. '~' will be expanded to $HOME or %HOMEPATH%, depending on platform. 
+        All subdirectories (and non-recursive links) will be included. -->
+        <path>/home/pi/videos</path>
+
+        <!-- A list of extensions to search for, delimited by any of the whitespace characters (", \r\n\t").
+        You MUST include the period at the start of the extension! It's also case sensitive. -->
+        <extension>.avi .mp4</extension>
+
+        <!-- The shell command executed when a game is selected. A few special tags are replaced if found in a command, like %ROM% (see below). -->
+        <command>/home/pi/joy2key/playvideo.sh %ROM%</command>
+        <!-- This example would run the bash command "snesemulator /home/user/roms/snes/Super\ Mario\ World.sfc". -->
+
+        <!-- The platform(s) to use when scraping. You can see the full list of accepted platforms in src/PlatformIds.cpp.
+        It's case sensitive, but everything is lowercase. This tag is optional.
+        You can use multiple platforms too, delimited with any of the whitespace characters (", \r\n\t"), eg: "genesis, megadrive" -->
+        <platform>omxplayer</platform>
+
+        <!-- The theme to load from the current theme set. See THEMES.md for more information.
+        This tag is optional; if not set, it will use the value of <name>. -->
+        <theme>omxplayer</theme>
+    </system>
+
+</systemList>
