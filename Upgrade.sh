@@ -1,4 +1,8 @@
 #!/bin/bash
+echo --------------------------------------------
+echo --  Upgrade to last release of raspicade  --  
+echo --------------------------------------------
+read -rsp $'Press any key to continue...\n' -n1 key
 today=`date +%Y-%m-%d.%H_%M_%S`
 echo Backup of old config files
 echo Backup of boot/config.txt
@@ -31,7 +35,11 @@ sudo apt-get install libsdl-mixer1.2 libavcodec53
 sudo apt-get install libboost-system1.49.0 libboost-filesystem1.49.0 libfreeimage3
 #EmulationStation 2
 sudo apt-get install libboost-date-time1.49.0
+#install SDL2 2.0.1 libs for ES2
+echo installing SDL2 libraries
+sudo tar xzf SDL2-2.0.1/libsdl2.0.1.tar.gz -C /
 #for scraper
+echo installing software for scraper
 sudo apt-get install python-imaging
 sudo apt-get remove --purge alsa-oss
 sudo apt-get clean
@@ -42,11 +50,27 @@ sudo rpi-update
 #git pull
 echo Copy new file in filesystem tree
 read -rsp $'Press any key to continue...\n' -n1 key
-cp .profile /home/pi/.profile
+echo Moving from ES1  to multi frontend
+rm /home/pi/.profile
+cp .profileES .profilePI ~/
+echo linking to ES by default
+ln -s  /home/pi/.profileES  /home/pi/.profile
+#cp .profile /home/pi/.profile
+echo Copying ESx directory and configuration
+cp -r EmulationStationV1 EmulationStationV2 .emulationstationV1 .emulationstationV2 ~/
+echo Linking to ES1 by default
+ln -s /home/pi/EmulationStationV1  /home/pi/EmulationStationV1
+ln -s  /home/pi/.emulationstationV1 /home/pi/.emulationstation
+echo Copying new Retrogame programs
 cp -r Raspicade-Retrogame-1Player/ ~/
 cp -r Raspicade-Retrogame-2Player-BPlus/ ~/
+echo Fixing Retrogame bug with ES2
+sudo cp etc/udev/rules.d/* /etc/udev/rules.d/
+echo Update Boot directory
 sudo cp boot/* /boot
+echo Config to 4-3monitor1024x768 by default
 sudo cp boot/config.txt-4-3monitor1024x768 /boot/config.txt
+echo copying Emulators directories
 cp -r pimenu/* ~/pimenu/
 cp -r mame4all-pi/* ~/mame4all-pi/
 cp -r pifba/* ~/pifba/
@@ -62,16 +86,19 @@ cp -r EmulationStation ~/
 cp -r .emulationstation ~/
 mkdir /home/pi/PicoDrive/romfelix
 chmod 777 /home/pi/PicoDrive/roms
+echo copying Videos directory and stuff for video management from ES1
 cp -r videos/ ~/
 chmod 777 ~/videos
 mkdir /home/pi/joy2key
 cp joy2key-code/joy2key /home/pi/joy2key
 cp playvideo.sh /home/pi/joy2key
 cp omxplayer_keys.rc /home/pi
+echo Updating  /etc/rc.local
 sudo cp etc/rc.local /etc/
+echo Updating Samba
 sudo cp etc/samba/smb.conf /etc/samba
 sudo service samba restart
-echo EmulationStation : Put scraper stuff in the good directory
+echo EmulationStation1 : Put scraper stuff in the good directory
 cp ES-scraper/mame_no_image.png /home/pi/mame4all-pi/roms/no_image.png
 cp ES-scraper/neogeo_no_image.png /home/pi/pifba/roms/no_image.png
 cp ES-scraper/neogeo_no_image.png  /home/pi/gngeo-pi/roms/no_image.png
@@ -80,7 +107,7 @@ cp ES-scraper/megadrive_no_image.png /home/pi/PicoDrive/romfelix/no_image.png
 cp ES-scraper/megadrive_no_image.png /home/pi/PicoDrive/roms/no_image.png
 # launch : python ~/temp/Raspicade-configuration-files/ES-scraper/scraper.py -v -w 350
 # to generate gamelists.xml file in each rom directory
-echo Making Updates
+echo Updates finished, reboot raspicade
 echo **********************************************************************************
 echo Default New GUI : EmulationEtation. File .profile is modified
 echo If you want the pimenu emulator selector please edit /home/pi/.profile file:
