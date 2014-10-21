@@ -27,8 +27,11 @@ sudo apt-get upgrade
 sudo apt-get clean
 echo Install libSDL_mixer and libavcodec
 sudo apt-get install libsdl-mixer1.2 libavcodec53
-#EmulationStation
+#EmulationStation 1 et 2
 sudo apt-get install libboost-system1.49.0 libboost-filesystem1.49.0 libfreeimage3
+#EmulationStation 2
+sudo apt-get install libboost-date-time1.49.0
+#for scraper
 sudo apt-get install python-imaging
 sudo apt-get remove --purge alsa-oss
 sudo apt-get clean
