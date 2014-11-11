@@ -1,7 +1,8 @@
 #!/bin/bash
-echo Updating Raspicade
-cd temp/Raspicade-configuration-files
-echo Downloading updates
+killall emulationsation
+killall pimenu
+cd ~/temp/Raspicade-configuration-files
+echo Downloading updates from git into temp/
 git pull
-echo Making updates
+echo Launching full Upgrade
 ./Upgrade.sh

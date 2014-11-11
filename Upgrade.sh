@@ -107,7 +107,7 @@ cp ES-scraper/megadrive_no_image.png /home/pi/PicoDrive/romfelix/no_image.png
 cp ES-scraper/megadrive_no_image.png /home/pi/PicoDrive/roms/no_image.png
 # launch : python ~/temp/Raspicade-configuration-files/ES-scraper/scraper.py -v -w 350
 # to generate gamelists.xml file in each rom directory
-echo Updates finished, reboot raspicade
+echo Updates finished 
 echo **********************************************************************************
 echo Default New GUI : EmulationEtation. File .profile is modified
 echo If you want the pimenu emulator selector please edit /home/pi/.profile file:
@@ -119,4 +119,5 @@ echo To get GUI with Game images and description please run :
 echo python ~/temp/Raspicade-configuration-files/ES-scraper/scraper.py -v -w 350
 echo to download image files and generate gamelists.xml file in each rom directory
 echo **********************************************************************************
-read -rsp $'Press any key to finish...\n' -n1 key
+echo Raspicade is going to reboot (type CTRL-C if you don't want to)
+read -rsp $'Press any key to reboot (CTRL-C to abort)...\n' -n1 key
