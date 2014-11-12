@@ -1,5 +1,5 @@
 #!/bin/bash
-killall emulationsation
+killall emulationstation
 killall pimenu
 cd ~/temp/Raspicade-configuration-files
 echo Downloading updates from git into temp/

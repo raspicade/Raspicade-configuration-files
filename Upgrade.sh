@@ -92,6 +92,7 @@ echo Adding Frontend selector at boot
 sudo cp etc/init.d/apifrontendconf /etc/init.d/
 sudo chmod a+x /etc/init.d/apifrontendconf
 sudo insserv /etc/init.d/apifrontendconf
+cp pifrontendconf.sh ~/
 echo Update Boot directory
 sudo cp boot/* /boot
 echo Config to 4-3monitor1024x768 by default
