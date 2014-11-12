@@ -128,8 +128,8 @@ cp -r .picodrive ~/
 cp -r dgen ~/
 cp -r .dgen ~/
 cp -r retro ~/
-mkdir ~/retro/roms_pcsx
-chmod 777 ~/retro/roms_pcsx ~/retro/roms_gambatte ~/retro/roms_meteor ~/retro/roms_vecx ~/retro/roms_stella
+mkdir ~/retro/roms_pcsx ~/retro/roms_fceu
+chmod 777 ~/retro/roms_pcsx ~/retro/roms_gambatte ~/retro/roms_meteor ~/retro/roms_vecx ~/retro/roms_stella ~/retro/roms_fceu
 #cp -r EmulationStation ~/
 #cp -r .emulationstation ~/
 if [ ! -d "/home/pi/PicoDrive/romfelix" ]; then
