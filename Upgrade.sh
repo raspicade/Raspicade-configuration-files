@@ -81,7 +81,7 @@ fi
 #rm -rf /home/pi/EmulationStation /home/pi/.emulationstation
 cp -r EmulationStationV1 EmulationStationV2 .emulationstationV1 .emulationstationV2 ~/
 echo Linking to ES1 by default
-ln -s /home/pi/EmulationStationV1  /home/pi/EmulationStationV1
+ln -s /home/pi/EmulationStationV1  /home/pi/EmulationStation
 ln -s  /home/pi/.emulationstationV1 /home/pi/.emulationstation
 echo Copying new Retrogame programs
 cp -r Raspicade-Retrogame-1Player/ ~/
