@@ -69,7 +69,16 @@ echo linking to ES by default
 ln -s  /home/pi/.profileES  /home/pi/.profile
 #cp .profile /home/pi/.profile
 echo Copying ESx directory and configuration
-rm -rf /home/pi/EmulationStation /home/pi/.emulationstation
+
+if [ ! -d "/home/pi/EmulationStation" ]; then
+  # Control will enter here if $DIRECTORY doesn't exist.
+  rm -rf /home/pi/EmulationStation 
+fi
+if [ ! -d "/home/pi/.emulationstation" ]; then
+  # Control will enter here if $DIRECTORY doesn't exist.
+  rm -rf /home/pi/.emulationstation
+fi
+#rm -rf /home/pi/EmulationStation /home/pi/.emulationstation
 cp -r EmulationStationV1 EmulationStationV2 .emulationstationV1 .emulationstationV2 ~/
 echo Linking to ES1 by default
 ln -s /home/pi/EmulationStationV1  /home/pi/EmulationStationV1
@@ -99,14 +108,20 @@ cp -r PicoDrive ~/
 cp -r .picodrive ~/
 cp -r dgen ~/
 cp -r .dgen ~/
-cp -r EmulationStation ~/
-cp -r .emulationstation ~/
-mkdir /home/pi/PicoDrive/romfelix
+#cp -r EmulationStation ~/
+#cp -r .emulationstation ~/
+if [ ! -d "/home/pi/PicoDrive/romfelix" ]; then
+  # Control will enter here if $DIRECTORY doesn't exist.
+  mkdir /home/pi/PicoDrive/romfelix
+fi
 chmod 777 /home/pi/PicoDrive/roms
 echo copying Videos directory and stuff for video management from ES1
 cp -r videos/ ~/
 chmod 777 ~/videos
-mkdir /home/pi/joy2key
+if [ ! -d "/home/pi/joy2key" ]; then
+  # Control will enter here if $DIRECTORY doesn't exist.
+  mkdir /home/pi/joy2key
+fi
 cp joy2key-code/joy2key /home/pi/joy2key
 cp playvideo.sh /home/pi/joy2key
 cp omxplayer_keys.rc /home/pi
