@@ -98,7 +98,10 @@ if [ -f "/etc/init.d/apifrontendconf" ]
 then
 	sudo rm  /etc/init.d/apifrontendconf
 fi
-#sudo rm  /etc/init.d/apizfrontendconf /etc/init.d/apifrontendconf
+if [ -f "/home/pi/avoid_config/no_frontendconf_at_boot.remove_extention_to_deactivate_question" ]
+then
+	touch /home/pi/avoid_config/no_frontendconf_at_boot.remove_extention_to_deactivate_question
+fi
 sudo cp etc/init.d/api* /etc/init.d/
 sudo chmod a+x /etc/init.d/apipfrontendconf
 sudo insserv /etc/init.d/apipfrontendconf
