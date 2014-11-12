@@ -1,27 +1,39 @@
 #!/bin/bash
+BACKUPDIR=/home/pi/backupconfig
 echo --------------------------------------------
 echo --  Upgrade to last release of raspicade  --  
 echo --------------------------------------------
+if [ ! -d "$BACKUPDIR" ]; then
+  # Control will enter here if $DIRECTORY doesn't exist.
+ mkdir /home/pi/backupconfig
+ mkdir /home/pi/backupconfig/mame4all-pi
+ mkdir /home/pi/backupconfig/gngeo
+ mkdir /home/pi/backupconfig/pifba
+ mkdir /home/pi/backupconfig/dgen
+ mkdir /home/pi/backupconfig/picodrive
+ mkdir /home/pi/backupconfig/pisnes
+ mkdir /home/pi/backupconfig/emulationstation
+fi
 read -rsp $'Press any key to continue...\n' -n1 key
 today=`date +%Y-%m-%d.%H_%M_%S`
 echo Backup of old config files
 echo Backup of boot/config.txt
-sudo cp /boot/config.txt /boot/config.txt_$today
+sudo cp /boot/config.txt /home/pi/backupconfig/config.txt_$today
 echo For Mame
-cp /home/pi/mame4all-pi/mame.cfg /home/pi/mame4all-pi/mame.cfg_$today
-cp -r  /home/pi/mame4all-pi/cfg /home/pi/mame4all-pi/cfg_$today
+cp /home/pi/mame4all-pi/mame.cfg /home/pi/backupconfig/mame4all-pi/mame.cfg_$today
+cp -r  /home/pi/mame4all-pi/cfg /home/pi/backupconfig/mame4all-pi/cfg_$today
 echo For Gngeo
-cp -r /home/pi/.gngeo /home/pi/.gngeo_$today
+cp -r /home/pi/.gngeo /home/pi/backupconfig/gngeo/.gngeo_$today
 echo For Dgen
-cp -r /home/pi/.dgen /home/pi/.dgen_$today
+cp -r /home/pi/.dgen /home/pi/backupconfig/dgen/.dgen_$today
 echo For EmulationStation
-cp -r /home/pi/.emulationstation /home/pi/.emulationstation_$today
+cp -r /home/pi/.emulationstation /home/pi/backupconfig/emulationstation/.emulationstation_$today
 echo For Picodrive
-cp -r /home/pi/.picodrive /home/pi/.picodrive_$today
+cp -r /home/pi/.picodrive /home/pi/backupconfig/picodrive/.picodrive_$today
 echo For PiFBA
-cp -r  /home/pi/pifba/fba2x.cfg /home/pi/pifba/fba2x.cfg_$today
+cp -r  /home/pi/pifba/fba2x.cfg /home/pi/backupconfig/pifba/fba2x.cfg_$today
 echo For PiSnes
-cp -r  /home/pi/pisnes/snes9x.cfg  /home/pi/pisnes/snes9x.cfg_$today
+cp -r  /home/pi/pisnes/snes9x.cfg  /home/pi/backupconfig/pisnes/snes9x.cfg_$today
 echo Upgrading Raspicade...
 read -rsp $'Press any key to continue...\n' -n1 key
 echo Apt-Get Update
