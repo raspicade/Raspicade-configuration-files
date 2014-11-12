@@ -78,6 +78,10 @@ cp -r Raspicade-Retrogame-1Player/ ~/
 cp -r Raspicade-Retrogame-2Player-BPlus/ ~/
 echo Fixing Retrogame bug with ES2
 sudo cp etc/udev/rules.d/* /etc/udev/rules.d/
+echo Adding Frontend selector at boot
+sudo cp etc/init.d/apifrontendconf /etc/init.d/
+sudo chmod a+x /etc/init.d/apifrontendconf
+sudo insserv /etc/init.d/apifrontendconf
 echo Update Boot directory
 sudo cp boot/* /boot
 echo Config to 4-3monitor1024x768 by default
