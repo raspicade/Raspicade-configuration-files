@@ -153,3 +153,4 @@ echo to download image files and generate gamelists.xml file in each rom directo
 echo **********************************************************************************
 echo Raspicade is going to reboot \(type CTRL-C if you don\'t want to\)
 read -rsp $'Press any key to reboot (CTRL-C to abort)...\n' -n1 key
+sudo reboot
