@@ -55,6 +55,7 @@ echo installing software for scraper
 sudo apt-get install python-imaging
 sudo apt-get remove --purge alsa-oss
 sudo apt-get clean
+sudo apt-get autoremove
 echo Update Firmware and Kernel
 read -rsp $'Press any key to continue...\n' -n1 key
 sudo rpi-update
