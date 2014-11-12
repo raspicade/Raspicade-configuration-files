@@ -90,9 +90,10 @@ cp -r Raspicade-Retrogame-2Player-BPlus/ ~/
 echo Fixing Retrogame bug with ES2
 sudo cp etc/udev/rules.d/* /etc/udev/rules.d/
 echo Adding Frontend selector at boot
-sudo cp etc/init.d/apifrontendconf /etc/init.d/
-sudo chmod a+x /etc/init.d/apifrontendconf
-sudo insserv /etc/init.d/apifrontendconf
+sudo rm  /etc/init.d/apizfrontendconf /etc/init.d/apifrontendconf
+sudo cp etc/init.d/api* /etc/init.d/
+sudo chmod a+x /etc/init.d/apipfrontendconf
+sudo insserv /etc/init.d/apipfrontendconf
 cp pifrontendconf.sh ~/
 echo Update Boot directory
 sudo cp boot/* /boot
