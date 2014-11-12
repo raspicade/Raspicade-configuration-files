@@ -69,7 +69,7 @@ echo linking to ES by default
 ln -s  /home/pi/.profileES  /home/pi/.profile
 #cp .profile /home/pi/.profile
 echo Copying ESx directory and configuration
-rm -rf EmulationStation .emulationstation
+rm -rf /home/pi/EmulationStation /home/pi/.emulationstation
 cp -r EmulationStationV1 EmulationStationV2 .emulationstationV1 .emulationstationV2 ~/
 echo Linking to ES1 by default
 ln -s /home/pi/EmulationStationV1  /home/pi/EmulationStationV1
