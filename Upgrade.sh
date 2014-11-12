@@ -70,11 +70,11 @@ ln -s  /home/pi/.profileES  /home/pi/.profile
 #cp .profile /home/pi/.profile
 echo Copying ESx directory and configuration
 
-if [ ! -d "/home/pi/EmulationStation" ]; then
+if [ -d "/home/pi/EmulationStation" ]; then
   # Control will enter here if $DIRECTORY doesn't exist.
   rm -rf /home/pi/EmulationStation 
 fi
-if [ ! -d "/home/pi/.emulationstation" ]; then
+if [ -d "/home/pi/.emulationstation" ]; then
   # Control will enter here if $DIRECTORY doesn't exist.
   rm -rf /home/pi/.emulationstation
 fi
