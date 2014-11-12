@@ -12,6 +12,7 @@ if [ ! -d "$BACKUPDIR" ]; then
  mkdir /home/pi/backupconfig/dgen
  mkdir /home/pi/backupconfig/picodrive
  mkdir /home/pi/backupconfig/pisnes
+ mkdir /home/pi/backupconfig/retro
  mkdir /home/pi/backupconfig/emulationstation
 fi
 read -rsp $'Press any key to continue...\n' -n1 key
@@ -34,6 +35,9 @@ echo For PiFBA
 cp -r  /home/pi/pifba/fba2x.cfg /home/pi/backupconfig/pifba/fba2x.cfg_$today
 echo For PiSnes
 cp -r  /home/pi/pisnes/snes9x.cfg  /home/pi/backupconfig/pisnes/snes9x.cfg_$today
+echo For Retro
+cp -r  /home/pi/retro/retroarch.cfg  /home/pi/backupconfig/pisnes/retroarch.cfg_$today
+cp -r  /home/pi/retro/retroarch-core-options.cfg  /home/pi/backupconfig/pisnes/retroarch-core-options.cfg_$today
 echo Upgrading Raspicade...
 read -rsp $'Press any key to continue...\n' -n1 key
 echo Apt-Get Update
@@ -123,6 +127,9 @@ cp -r PicoDrive ~/
 cp -r .picodrive ~/
 cp -r dgen ~/
 cp -r .dgen ~/
+cp -r retro ~/
+mkdir ~/retro/roms_pcsx
+chmod 777 ~/retro/roms_pcsx ~/retro/roms_gambatte ~/retro/roms_meteor ~/retro/roms_vecx ~/retro/roms_stella
 #cp -r EmulationStation ~/
 #cp -r .emulationstation ~/
 if [ ! -d "/home/pi/PicoDrive/romfelix" ]; then
