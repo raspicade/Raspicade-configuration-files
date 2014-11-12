@@ -103,6 +103,7 @@ sudo cp etc/init.d/api* /etc/init.d/
 sudo chmod a+x /etc/init.d/apipfrontendconf
 sudo insserv /etc/init.d/apipfrontendconf
 cp pifrontendconf.sh ~/
+cp SelectES1.sh SelectES2.sh SelectPIMENU.sh getPiInfo.sh piaudioconf.sh pifrontendconf.sh pinetconf.sh raspicade_update.sh shutdown.sh GetTemp.sh ~/
 echo Update Boot directory
 sudo cp boot/* /boot
 echo Config to 4-3monitor1024x768 by default
