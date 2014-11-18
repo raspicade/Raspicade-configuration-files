@@ -1,4 +1,5 @@
-#!/bin/bash
+!/bin/bash
+killall retrogame
 killall emulationstation
 killall pimenu
 cd ~/temp/Raspicade-configuration-files
