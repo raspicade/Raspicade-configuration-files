@@ -114,5 +114,5 @@ sdram_freq=450
 hdmi_group=2
 hdmi_mode=16
 
-gpu_mem_512=128
+gpu_mem_512=256
 force_turbo=1

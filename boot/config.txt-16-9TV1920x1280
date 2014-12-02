@@ -68,5 +68,6 @@ overscan_right=-10
 overscan_top=-20
 overscan_bottom=-20
 
-gpu_mem_512=128
+gpu_mem_512=256
 force_turbo=1
+
