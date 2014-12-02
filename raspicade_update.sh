@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 killall retrogame
 killall emulationstation
 killall pimenu
