@@ -25,9 +25,9 @@ if [ -z "$SSH_CONNECTION" ]; then
 #echo && echo "Starting PIMENU" && echo
 #/home/pi/pimenu/pimenu
 echo && echo "Starting EmulationStation" && echo
-#/home/pi/EmulationStation/emulationstation --gamelist-only
-/home/pi/EmulationStation/emulationstation
-#/home/pi/EmulationStation/emulationstation --ignore-gamelist
+#clear;/home/pi/EmulationStation/emulationstation --gamelist-only > /dev/null 2>&1
+clear;/home/pi/EmulationStation/emulationstation > /dev/null 2>&1
+#clear;/home/pi/EmulationStation/emulationstation --ignore-gamelist > /dev/null 2>&1
 #sudo /usr/bin/fbi -T 1 -noverbose -a /home/pi/splash.png
 #sleep 2
 #sudo halt

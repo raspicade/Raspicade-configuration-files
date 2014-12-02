@@ -23,7 +23,7 @@ fi
 if [ -z "$SSH_CONNECTION" ]; then
 # Launch PIMENU only
 echo && echo "Starting PIMENU" && echo
-/home/pi/pimenu/pimenu
+clear;home/pi/pimenu/pimenu > /dev/null 2>&1
 #echo && echo "Starting EmulationStation" && echo
 #/home/pi/EmulationStation/emulationstation --gamelist-only
 #/home/pi/EmulationStation/emulationstation
