@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<gameList>
+	<game>
+		<path>./bleep.gbc</path>
+		<name>Bleep</name>
+		<desc>No Description Available.</desc>
+		<image>./no_image.png</image>
+	</game>
+	<game>
+		<path>./SHMUP.BB</path>
+		<name>Shmup</name>
+		<desc>No Description Available.</desc>
+		<image>./no_image.png</image>
+	</game>
+	<game>
+		<path>./BackToColor.gbc</path>
+		<name>BackToColor</name>
+		<desc>No Description Available.</desc>
+		<image>./no_image.png</image>
+	</game>
+	<game>
+		<path>./slider.gb</path>
+		<name>Slider</name>
+		<desc>No Description Available.</desc>
+		<image>./no_image.png</image>
+	</game>
+	<game>
+		<path>./snake.gb</path>
+		<name>Snake</name>
+		<desc>No Description Available.</desc>
+		<image>./no_image.png</image>
+	</game>
+	<game>
+		<path>./SteinsGate8-Bit.gb</path>
+		<name>SteinsGate8-Bit</name>
+		<desc>No Description Available.</desc>
+		<image>./no_image.png</image>
+	</game>
+	<game>
+		<path>./turtle.gb</path>
+		<name>Turtle</name>
+		<desc>No Description Available.</desc>
+		<image>./no_image.png</image>
+	</game>
+</gameList>

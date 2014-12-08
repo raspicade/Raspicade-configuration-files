@@ -164,7 +164,7 @@ cp ES-scraper/gba_no_image.png /home/pi/retro/roms_meteor/no_image.png
 cp ES-scraper/gbgbc_no_image.png /home/pi/retro/roms_gambatte/no_image.png
 cp ES-scraper/nes_no_image.png /home/pi/retro/roms_fceu/no_image.png
 cp ES-scraper/vectrex_no_image.png /home/pi/retro/roms_vecx/no_image.png
-
+cp ES-scraper/psx_no_image.png /home/pi/retro/roms_pcsx/no_image.png
 # launch : python ~/temp/Raspicade-configuration-files/ES-scraper/scraper.py -v -w 350
 # to generate gamelists.xml file in each rom directory
 echo Updates finished 
