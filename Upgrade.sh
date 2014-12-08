@@ -159,6 +159,12 @@ cp ES-scraper/neogeo_no_image.png  /home/pi/gngeo-pi/roms/no_image.png
 cp ES-scraper/snes_no_image.png  /home/pi/pisnes/roms/no_image.png
 cp ES-scraper/megadrive_no_image.png /home/pi/PicoDrive/romfelix/no_image.png
 cp ES-scraper/megadrive_no_image.png /home/pi/PicoDrive/roms/no_image.png
+cp ES-scraper/atari2600_no_image.png /home/pi/retro/roms_stella/no_image.png
+cp ES-scraper/gba_no_image.png /home/pi/retro/roms_meteor/no_image.png
+cp ES-scraper/gbgbc_no_image.png /home/pi/retro/roms_gambatte/no_image.png
+cp ES-scraper/nes_no_image.png /home/pi/retro/roms_fceu/no_image.png
+cp ES-scraper/vectrex_no_image.png /home/pi/retro/roms_vecx/no_image.png
+
 # launch : python ~/temp/Raspicade-configuration-files/ES-scraper/scraper.py -v -w 350
 # to generate gamelists.xml file in each rom directory
 echo Updates finished 
