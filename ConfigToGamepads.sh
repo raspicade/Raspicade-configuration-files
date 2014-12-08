@@ -1,7 +1,7 @@
 #!/bin/bash
 echo FrontEnd modification
-cp ~/.emulationstationV1/es_input.cfg-gamepads ~/.emulationstationV1/es_input.cfg
-cp ~/.emulationstationV2/es_input.cfg-gamepads ~/.emulationstationV2/es_input.cfg
+#cp ~/.emulationstationV1/es_input.cfg-gamepads ~/.emulationstationV1/es_input.cfg
+#cp ~/.emulationstationV2/es_input.cfg-gamepads ~/.emulationstationV2/es_input.cfg
 cp ~/pimenu/pimenu.cfg-gamepads ~/pimenu/pimenu.cfg
 echo Emulators modification
 cp ~/.picodrive/config2.cfg-gamepads ~/.picodrive/config2.cfg
