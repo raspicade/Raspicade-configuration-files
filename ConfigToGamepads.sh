@@ -14,3 +14,4 @@ cp ~/mame4all-pi/cfg/default.cfg-gamepads ~/mame4all-pi/cfg/default.cfg
 cp ~/pifba/fba2x.cfg-gamepads ~/pifba/fba2x.cfg
 cp ~/pisnes/snes9x.cfg-2players  ~/pisnes/snes9x.cfg
 cp ~/retro/retroarch.cfg-gamepads ~/retro/retroarch.cfg
+cp ~/.config/mupen64plus/mupen64plus.cfg-gamepads-auto ~/.config/mupen64plus/mupen64plus.cfg
