@@ -13,5 +13,5 @@ cp ~/mame4all-pi/cfg/default.cfg-xinmo-2players ~/mame4all-pi/cfg/default.cfg
 cp ~/mame4all-pi/mame.cfg-xinmo-2players ~/mame4all-pi/mame.cfg
 cp ~/pifba/fba2x.cfg-xinmo-2players ~/pifba/fba2x.cfg
 cp ~/pisnes/snes9x.cfg-xinmo-2players ~/pisnes/snes9x.cfg
-cp ~/retro/retroarch.cfg-xinmo-2players ~/retro/retroarch.cfg
+cp -f ~/retro/retroarch.cfg-xinmo-2players ~/retro/retroarch.cfg
 cp ~/.config/mupen64plus/mupen64plus.cfg-xinmo-2players ~/.config/mupen64plus/mupen64plus.cfg
