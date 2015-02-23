@@ -35,6 +35,9 @@ fi
 #Uncomment to launch Raspicade-Retrogame-2Player-Bplus for B+ only
 #/home/pi/Raspicade-Retrogame-2Player-BPlus/retrogame &
 
+#Uncomment to launch Raspicade-Retrogame-2Player-Pi2 for Pi1 an Pi2
+#/home/pi/Raspicade-Retrogame-2Player-Pi2/retrogame &
+
 #Uncomment to launch pikeyd deamon to support mcp modules
 #/home/pi/pikeyd/pikeyd -d
 

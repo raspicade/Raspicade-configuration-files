@@ -91,6 +91,7 @@ ln -s  /home/pi/.emulationstationV1 /home/pi/.emulationstation
 echo Copying new Retrogame programs
 cp -r Raspicade-Retrogame-1Player/ ~/
 cp -r Raspicade-Retrogame-2Player-BPlus/ ~/
+cp -r Raspicade-Retrogame-2Player-Pi2/ ~/
 echo Fixing Retrogame bug with ES2
 sudo cp etc/udev/rules.d/* /etc/udev/rules.d/
 echo Adding Frontend selector at boot
