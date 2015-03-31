@@ -56,7 +56,7 @@ sudo apt-get install libboost-system1.49.0 libboost-filesystem1.49.0 libfreeimag
 #EmulationStation 2
 sudo apt-get install libboost-date-time1.49.0
 #install patched release of SDL1 for Dgen and Stella
-sudo  dpkg -i ../libsdl1.2-dev_1.2.15-8rpi_armhf.deb  ../libsdl1.2debian_1.2.15-8rpi_armhf.deb 
+#sudo  dpkg -i ../libsdl1.2-dev_1.2.15-8rpi_armhf.deb  ../libsdl1.2debian_1.2.15-8rpi_armhf.deb 
 #install SDL2 2.0.1 libs for ES2
 echo installing SDL2 libraries
 sudo tar xzf SDL2-2.0.1/libsdl2.0.1.tar.gz -C /
@@ -135,6 +135,7 @@ if [ -f "/etc/init.d/asplashscreen" ]
 then
 	sudo insserv -r /etc/init.d/asplashscreen
 	sudo rm  /etc/init.d/asplashscreen
+fi
 if [ ! -f "/home/pi/avoid_config/no_frontendconf_at_boot.remove_extention_to_deactivate_question" ]
 then
 	touch /home/pi/avoid_config/no_frontendconf_at_boot.remove_extention_to_deactivate_question
@@ -172,7 +173,7 @@ cp -r .dgen ~/
 cp -r retro ~/
 cp -r mupen64plus ~/
 mkdir ~/retro/roms_pcsx ~/retro/roms_fceu ~/retro/bios ~/retro/roms_scummvm
-chmod 777 ~/retro/roms_pcsx ~/retro/roms_gambatte ~/retro/roms_meteor ~/retro/roms_vecx ~/retro/roms_stella ~/retro/roms_fceu ~/retro/scummvm
+chmod 777 ~/retro/roms_pcsx ~/retro/roms_gambatte ~/retro/roms_meteor ~/retro/roms_vecx ~/retro/roms_stella ~/retro/roms_fceu ~/retro/roms_scummvm
 #cp -r EmulationStation ~/
 #cp -r .emulationstation ~/
 if [ ! -d "/home/pi/PicoDrive/romfelix" ]; then
