@@ -51,6 +51,8 @@ sudo apt-get install libsdl-mixer1.2 libavcodec53
 sudo apt-get install libboost-system1.49.0 libboost-filesystem1.49.0 libfreeimage3
 #EmulationStation 2
 sudo apt-get install libboost-date-time1.49.0
+#install patched release of SDL1 for Dgen and Stella
+sudo  dpkg -i ../libsdl1.2-dev_1.2.15-8rpi_armhf.deb  ../libsdl1.2debian_1.2.15-8rpi_armhf.deb 
 #install SDL2 2.0.1 libs for ES2
 echo installing SDL2 libraries
 sudo tar xzf SDL2-2.0.1/libsdl2.0.1.tar.gz -C /
@@ -129,7 +131,8 @@ cp -r .picodrive ~/
 cp -r dgen ~/
 cp -r .dgen ~/
 cp -r retro ~/
-mkdir ~/retro/roms_pcsx ~/retro/roms_fceu
+cp -r mupen64plus ~/
+mkdir ~/retro/roms_pcsx ~/retro/roms_fceu ~/retro/bios
 chmod 777 ~/retro/roms_pcsx ~/retro/roms_gambatte ~/retro/roms_meteor ~/retro/roms_vecx ~/retro/roms_stella ~/retro/roms_fceu
 #cp -r EmulationStation ~/
 #cp -r .emulationstation ~/
