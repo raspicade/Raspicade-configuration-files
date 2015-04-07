@@ -1,6 +1,10 @@
 #!/bin/bash
 BACKUPDIR=/home/pi/backupconfig
 echo --------------------------------------------
+echo -- WARNING : script not fully operationnal--
+echo --  USE AT YOUR OWN RISK                  -- 
+echo --------------------------------------------
+echo --------------------------------------------
 echo --  Upgrade to last release of raspicade  --  
 echo --------------------------------------------
 if [ ! -d "$BACKUPDIR" ]; then
@@ -65,6 +69,15 @@ sudo apt-get autoremove
 echo Update Firmware and Kernel
 read -rsp $'Press any key to continue...\n' -n1 key
 sudo rpi-update
+echo Installing the Raspicade Kernel  : for xin-mo bug correction
+read -rsp $'Press any key to continue...\n' -n1 key
+tar xzf kernel/custom_kernel_1.20150323-1.tar.gz
+cd custom_kernel_1.20150323-1/
+sudo ./install.sh
+cd ..
+echo Installing patched SDL1.2 libs to fix "black screen" bug
+read -rsp $'Press any key to continue...\n' -n1 key
+sudo dpkg -i SDL1_patchedlibs/libsdl1.2*
 #echo Downloading Updates
 #git pull
 echo Copy new file in filesystem tree
@@ -97,27 +110,53 @@ cp -r Raspicade-Retrogame-2Player-Pi2/ ~/
 echo Fixing Retrogame bug with ES2
 sudo cp etc/udev/rules.d/* /etc/udev/rules.d/
 echo Adding Frontend selector at boot
+echo Modifying the boot order for configuration script 
 if [ -f "/etc/init.d/apizfrontendconf" ]
 then
+	sudo insserv -r /etc/init.d/apizfrontendconf
 	sudo rm  /etc/init.d/apizfrontendconf
 fi
 if [ -f "/etc/init.d/apifrontendconf" ]
 then
+	sudo insserv -r /etc/init.d/apifrontendconf
 	sudo rm  /etc/init.d/apifrontendconf
 fi
+if [ -f "/etc/init.d/apiaudioconf" ]
+then
+	sudo insserv -r /etc/init.d/apiaudioconf
+	sudo rm  /etc/init.d/apiaudioconf
+fi
+if [ -f "/etc/init.d/apinetconf" ]
+then
+	sudo insserv -r /etc/init.d/apinetconf
+	sudo rm  /etc/init.d/apinetconf
+fi
+if [ -f "/etc/init.d/asplashscreen" ]
+then
+	sudo insserv -r /etc/init.d/asplashscreen
+	sudo rm  /etc/init.d/asplashscreen
 if [ ! -f "/home/pi/avoid_config/no_frontendconf_at_boot.remove_extention_to_deactivate_question" ]
 then
 	touch /home/pi/avoid_config/no_frontendconf_at_boot.remove_extention_to_deactivate_question
 fi
-sudo cp etc/init.d/api* /etc/init.d/
-sudo chmod a+x /etc/init.d/apipfrontendconf
-sudo insserv /etc/init.d/apipfrontendconf
+sudo cp etc/init.d/mu* /etc/init.d/
+sudo cp etc/init.d/mv* /etc/init.d/
+sudo cp etc/init.d/na* /etc/init.d/
+sudo insserv /etc/init.d/muapiaudioconf
+sudo insserv /etc/init.d/mubpinetconf
+sudo insserv /etc/init.d/mvapifrontendconf
+sudo insserv /etc/init.d/nasplashscreen
+
+#sudo chmod a+x /etc/init.d/apipfrontendconf
+#sudo insserv /etc/init.d/apipfrontendconf
+
 cp pifrontendconf.sh ~/
 cp SelectES1.sh SelectES2.sh SelectPIMENU.sh getPiInfo.sh piaudioconf.sh pifrontendconf.sh pinetconf.sh raspicade_update.sh shutdown.sh GetTemp.sh ~/
-echo Update Boot directory
+echo Update Boot directory : to fix SD card boot problem
 sudo cp boot/* /boot
 echo Config to 4-3monitor1024x768 by default
 sudo cp boot/config.txt-4-3monitor1024x768 /boot/config.txt
+echo 
 echo copying Emulators directories
 cp -r pimenu/* ~/pimenu/
 cp -r mame4all-pi/* ~/mame4all-pi/
@@ -132,8 +171,8 @@ cp -r dgen ~/
 cp -r .dgen ~/
 cp -r retro ~/
 cp -r mupen64plus ~/
-mkdir ~/retro/roms_pcsx ~/retro/roms_fceu ~/retro/bios
-chmod 777 ~/retro/roms_pcsx ~/retro/roms_gambatte ~/retro/roms_meteor ~/retro/roms_vecx ~/retro/roms_stella ~/retro/roms_fceu
+mkdir ~/retro/roms_pcsx ~/retro/roms_fceu ~/retro/bios ~/retro/roms_scummvm
+chmod 777 ~/retro/roms_pcsx ~/retro/roms_gambatte ~/retro/roms_meteor ~/retro/roms_vecx ~/retro/roms_stella ~/retro/roms_fceu ~/retro/scummvm
 #cp -r EmulationStation ~/
 #cp -r .emulationstation ~/
 if [ ! -d "/home/pi/PicoDrive/romfelix" ]; then
@@ -169,6 +208,7 @@ cp ES-scraper/gbgbc_no_image.png /home/pi/retro/roms_gambatte/no_image.png
 cp ES-scraper/nes_no_image.png /home/pi/retro/roms_fceu/no_image.png
 cp ES-scraper/vectrex_no_image.png /home/pi/retro/roms_vecx/no_image.png
 cp ES-scraper/psx_no_image.png /home/pi/retro/roms_pcsx/no_image.png
+cp ES-scraper/scummvm_no_image.png  /home/pi/retro/roms_scummvm/no_image.png
 # launch : python ~/temp/Raspicade-configuration-files/ES-scraper/scraper.py -v -w 350
 # to generate gamelists.xml file in each rom directory
 echo Updates finished 
