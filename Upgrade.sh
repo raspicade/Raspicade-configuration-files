@@ -71,7 +71,7 @@ read -rsp $'Press any key to continue...\n' -n1 key
 sudo rpi-update
 echo Installing the Raspicade Kernel  : for xin-mo bug correction
 read -rsp $'Press any key to continue...\n' -n1 key
-tar xzf kernel/custom_kernel_1.20150323-1.tar.gz
+tar xzf kernel/custom_kernel_1.20150407-1.tar.gz
 cd custom_kernel_1.20150323-1/
 sudo ./install.sh
 cd ..
@@ -145,6 +145,7 @@ sudo cp etc/init.d/mv* /etc/init.d/
 sudo cp etc/init.d/na* /etc/init.d/
 sudo insserv /etc/init.d/muapiaudioconf
 sudo insserv /etc/init.d/mubpinetconf
+sudo insserv /etc/init.d/mucpiinputconf
 sudo insserv /etc/init.d/mvapifrontendconf
 sudo insserv /etc/init.d/nasplashscreen
 
