@@ -388,7 +388,7 @@ TextureEnhancementControl = 0
 # Color bit depth to use for textures (0=default, 1=32 bits, 2=16 bits)
 TextureQuality = 0
 # Z-buffer depth (only 16 or 32)
-OpenGLDepthBufferSetting = 32
+OpenGLDepthBufferSetting = 16
 # Enable/Disable MultiSampling (0=off, 2,4,8,16=quality)
 MultiSampling = 0
 # Color bit depth for rendering window (0=32 bits, 1=16 bits)
