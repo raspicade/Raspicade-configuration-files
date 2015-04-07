@@ -1,0 +1,40 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          mucpiinputconf
+# Required-Start:    
+# Required-Stop:
+# Should-Start:      
+# Default-Start:     S
+# Default-Stop:
+# Short-Description: Config input type at boot time
+# Description:       Config input type at boot time
+### END INIT INFO
+ 
+ 
+do_start () {
+ 
+    /home/pi/piinputconf.sh    
+    exit 0
+}
+ 
+case "$1" in
+  start|"")
+    do_start
+    ;;
+  restart|reload|force-reload)
+    echo "Error: argument '$1' not supported" >&2
+    exit 3
+    ;;
+  stop)
+    # No-op
+    ;;
+  status)
+    exit 0
+    ;;
+  *)
+    echo "Usage: apinetconf [start|stop]" >&2
+    exit 3
+    ;;
+esac
+ 
+:
