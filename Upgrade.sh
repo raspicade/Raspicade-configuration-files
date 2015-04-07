@@ -4,9 +4,9 @@ echo --------------------------------------------
 echo -- WARNING : script not fully operationnal--
 echo --  USE AT YOUR OWN RISK                  -- 
 echo --------------------------------------------
-echo --------------------------------------------
-echo --  Upgrade to last release of raspicade  --  
-echo --------------------------------------------
+echo ------------------------------------------------
+echo --Try to Upgrade to last release of raspicadei--  
+echo ------------------------------------------------
 if [ ! -d "$BACKUPDIR" ]; then
   # Control will enter here if $DIRECTORY doesn't exist.
  mkdir /home/pi/backupconfig
