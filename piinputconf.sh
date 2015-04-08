@@ -37,19 +37,19 @@ then
 	exit 0;
 else	
 	printf "To avoid this configuration create the file /home/pi/avoid_config/no_inputconf_at_boot\n"; 
-	printf "Do you want to configure your type of input (Keyboard-retrogame-IPAC/Gamepads/XinMo-Arcade) (y/n):"
+	printf "Do you want to configure your type of input (XinMo-Arcade/Gamepads/Keyboard-retrogame-IPAC/GPIO retrogame) (y/n):"
 	read answer
 	result=$(empty_or_multiline "$answer")
 
 	while [ $result -eq 0 ]
 	do
-		echo "Do you want to configure your type of input (XinMo-Arcade/Gamepads/Keyboard-retrogame-IPAC) (y/n):"
+		echo "Do you want to configure your type of input (XinMo-Arcade/Gamepads/Keyboard-retrogame-IPAC/GPIO retrogame) (y/n):"
 		read answer
 		result=$(empty_or_multiline "$answer")
 	done
 	if [ "$answer" == "y" ]
 	then
-		printf "Select your type of input (0 = keyboard, 1 = gamepads, 2 = xinmo) :"
+		printf "Select your type of input (0 = keyboard, 1 = gamepads, 2 = xinmo, 3 = GPIO Retrogame Brev2,B+ 1Player, 4 = GPIO Retrogame B+ 2Players, 5 = GPIO Retrogame Pi2 1-2 Players, 6 = MCP23017 Module Brev2 B+ Pi2 pikeyd ) :"
 		read selectinput
 		result=$(empty_or_multiline "$selectinput")
 
