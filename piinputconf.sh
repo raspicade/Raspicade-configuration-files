@@ -36,7 +36,7 @@ if [ -f  $noinputconfigatboot ]
 then
 	exit 0;
 else	
- 
+	printf "To avoid this configuration create the file /home/pi/avoid_config/no_inputconf_at_boot\n"; 
 	printf "Do you want to configure your type of input (Keyboard-retrogame-IPAC/Gamepads/XinMo-Arcade) (y/n):"
 	read answer
 	result=$(empty_or_multiline "$answer")

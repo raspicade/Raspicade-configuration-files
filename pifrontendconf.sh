@@ -34,6 +34,7 @@ if [ -f  $nofrontendconfigatboot ]
 then
 	exit 0;
 else	
+	printf "To avoid this configuration create the file /home/pi/avoid_config/no_frontendconf_at_boot\n";
 	printf "Do you want to configure frontend for raspicade (y/n):"
 	read answer
 	result=$(empty_or_multiline "$answer")

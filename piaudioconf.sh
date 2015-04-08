@@ -41,7 +41,7 @@ else
 	if [ -f  $audioconffile ]
 	then
 		printf "$audioconffile present. Go to configuration\n";
- 
+		printf "To avoid this configuration create the file /home/pi/avoid_config/no_audioconf_at_boot\n"; 
 		printf "Do you want to configure audio output of raspicade (y/n):"
 		read answer
 		result=$(empty_or_multiline "$answer")

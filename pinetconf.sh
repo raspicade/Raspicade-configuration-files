@@ -34,6 +34,7 @@ then
 else	
 	if [ -f  $netconffile ]
 	then
+		printf "To avoid this configuration create the file /home/pi/avoid_config/no_netconf_at_boot\n";
 		printf "the file $netconffile exists\n";
 		if grep -q "iface eth0 inet static" "$netconffile"; 
 		then
