@@ -55,7 +55,7 @@ else
 
 		while [ $result -eq 0 ]
 		do
-		printf "Select your type of input (0 = keyboard, 1 = gamepads, 2 = xinmo) :"
+		printf "Select your type of input (0 = keyboard, 1 = gamepads, 2 = xinmo, 3 = GPIO Retrogame Brev2,B+ 1Player, 4 = GPIO Retrogame B+ 2Players, 5 = GPIO Retrogame Pi2 1-2 Players, 6 = MCP23017 Module Brev2 B+ Pi2 pikeyd ) :"
 		read selectinput
 		result=$(empty_or_multiline "$selectinput")
 		done
@@ -63,12 +63,31 @@ else
 		case "$selectinput" in
 			0) printf "Keyboard selected.\n";
 			   /home/pi/ConfigToKeyboard.sh;
+			   sudo cp /etc/rc.local-orig /etc/rc.local;
 			;;
 			1) printf "Gamepads selected.\n";
 			   /home/pi/ConfigToGamepads.sh;
+			   sudo cp /etc/rc.local-orig /etc/rc.local;
 			;;
 			2) printf "XinMo selected.\n";
 			   /home/pi/ConfigToXinMo.sh;
+			   sudo cp /etc/rc.local-orig /etc/rc.local;
+			;;
+			3) printf "GPIO Retrogame Brev2,B+ 1Player selected.\n";
+			   /home/pi/ConfigToKeyboard.sh;
+			   sudo cp /etc/rc.local-Brev2-B+-1Player /etc/rc.local;
+			;;
+			4) printf "GPIO Retrogame B+ 2Players selected.\n";
+			   /home/pi/ConfigToKeyboard.sh;
+			   sudo cp /etc/rc.local-B+-2Players /etc/rc.local;
+			;;
+			5) printf "GPIO Retrogame Pi2 1-2 Players selected.\n";
+			   /home/pi/ConfigToKeyboard.sh;
+			   sudo cp /etc/rc.local-Pi2-1-2Players /etc/rc.local;
+			;;
+			6) printf "MCP23017 Module Brev2 B+ Pi2 pikeyd selected.\n";
+			   /home/pi/ConfigToKeyboard.sh;
+			   sudo cp /etc/rc.local-Brev2-B+-Pi2-pikeyd /etc/rc.local;
 			;;
 			*) printf "Problem with selection\n"
 			;;
