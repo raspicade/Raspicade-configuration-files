@@ -72,7 +72,7 @@ sudo rpi-update
 echo Installing the Raspicade Kernel  : for xin-mo bug correction
 read -rsp $'Press any key to continue...\n' -n1 key
 tar xzf kernel/custom_kernel_1.20150407-1.tar.gz
-cd custom_kernel_1.20150323-1/
+cd custom_kernel_1.20150407-1/
 sudo ./install.sh
 cd ..
 echo Installing patched SDL1.2 libs to fix "black screen" bug
@@ -151,9 +151,9 @@ sudo insserv /etc/init.d/nasplashscreen
 
 #sudo chmod a+x /etc/init.d/apipfrontendconf
 #sudo insserv /etc/init.d/apipfrontendconf
-
-cp pifrontendconf.sh ~/
-cp SelectES1.sh SelectES2.sh SelectPIMENU.sh getPiInfo.sh piaudioconf.sh pifrontendconf.sh pinetconf.sh raspicade_update.sh shutdown.sh GetTemp.sh ~/
+#adding new startup script
+sudo cp etc/rc.local* /etc
+cp SelectES1.sh SelectES2.sh SelectPIMENU.sh getPiInfo.sh piaudioconf.sh pifrontendconf.sh piinput.sh pinetconf.sh raspicade_update.sh shutdown.sh GetTemp.sh ~/
 echo Update Boot directory : to fix SD card boot problem
 sudo cp boot/* /boot
 echo Config to 4-3monitor1024x768 by default
@@ -173,6 +173,7 @@ cp -r dgen ~/
 cp -r .dgen ~/
 cp -r retro ~/
 cp -r mupen64plus ~/
+cp -r .config ~/
 mkdir ~/retro/roms_pcsx ~/retro/roms_fceu ~/retro/bios ~/retro/roms_scummvm
 chmod 777 ~/retro/roms_pcsx ~/retro/roms_gambatte ~/retro/roms_meteor ~/retro/roms_vecx ~/retro/roms_stella ~/retro/roms_fceu ~/retro/roms_scummvm
 #cp -r EmulationStation ~/
