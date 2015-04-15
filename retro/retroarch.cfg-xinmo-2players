@@ -1,3 +1,6 @@
+video_shader_enable = "true"
+video_shader = ":/common-shaders/scanline.glsl"
+#video_shader = ":/common-shaders/retro-v2.glsl"
 video_driver = "gl"
 video_fullscreen = "true"
 video_smooth = "false"
