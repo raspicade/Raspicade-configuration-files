@@ -68,6 +68,9 @@ overscan_right=-10
 overscan_top=-20
 overscan_bottom=-20
 
-gpu_mem_512=256
-force_turbo=1
+#Audio disable_audio_dither Disables dithering on the PWM audio algorithm. Try this if you experience issues with white noise on the audio jack.
+disable_audio_dither=1
 
+gpu_mem_512=128
+gpu_mem_1024=256
+force_turbo=1

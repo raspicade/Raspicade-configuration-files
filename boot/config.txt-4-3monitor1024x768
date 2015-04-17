@@ -114,5 +114,9 @@ sdram_freq=450
 hdmi_group=2
 hdmi_mode=16
 
+#Audio disable_audio_dither Disables dithering on the PWM audio algorithm. Try this if you experience issues with white noise on the audio jack.
+disable_audio_dither=1
+
 gpu_mem_512=256
+gpu_mem_1024=256
 force_turbo=1

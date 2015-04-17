@@ -103,21 +103,19 @@ kernel=kernel.img
 # for more options see http://elinux.org/RPi_config.txt
 #start_x=0
 #uncomment to overclock the arm. 700 MHz is the default.
-#arm_freq=900
-#gpu_freq=350
-#core_freq=450
-#sdram_freq=450
-#over_voltage=6
-
-over_voltage=6
-arm_freq=1000
+arm_freq=900
 gpu_freq=350
-core_freq=500
-sdram_freq=500
+core_freq=450
+sdram_freq=450
+#over_voltage=6
 
 #force video mode in 1024x768 60Hz for pc monitor
 hdmi_group=2
 hdmi_mode=16
 
+#Audio disable_audio_dither Disables dithering on the PWM audio algorithm. Try this if you experience issues with white noise on the audio jack.
+disable_audio_dither=1
+
 gpu_mem_512=256
+gpu_mem_1024=256
 force_turbo=1
