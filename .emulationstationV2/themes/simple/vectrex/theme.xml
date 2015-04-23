@@ -3,7 +3,9 @@
     <include>./../simple.xml</include>
 
 	<view name="system">
-
+		<sound name="bgsound">
+			<path>./sounds/system.ogg</path>
+		</sound>
 		<image name="background" extra="true">
 			<path>./art/Vectrex_machines1920x1080blur.jpg</path>
 		</image>
