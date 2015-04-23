@@ -78,5 +78,5 @@ cat > "sdl2.list" << _EOF_
 /usr/local/lib/pkgconfig/sdl2.pc
 _EOF_
 
-tar cvfpz /home/pi/temp/Raspicade-configuration-files/SDL2-2.0.1/libsdl2.0.1.tar.gz -T sdl2.list
+tar cvfpz /home/pi/temp/Raspicade-configuration-files/SDL2-2.0.1/libsdl2_mixer2.0.1.tar.gz -T sdl2.list
 rm sdl2.list
