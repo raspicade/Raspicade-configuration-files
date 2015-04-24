@@ -54,7 +54,7 @@ sudo apt-get install libsdl-mixer1.2 libavcodec53
 #EmulationStation 1 et 2
 sudo apt-get install libboost-system1.49.0 libboost-filesystem1.49.0 libfreeimage3
 #EmulationStation 2
-sudo apt-get install libboost-date-time1.49.0 libboost-locale1.49.0 libboost-thread1.49.0
+sudo apt-get install libboost-date-time1.49.0 libboost-locale1.49.0 libboost-thread1.49.0 libboost-regex1.49.0
 #install patched release of SDL1 for Dgen and Stella
 #sudo  dpkg -i ../libsdl1.2-dev_1.2.15-8rpi_armhf.deb  ../libsdl1.2debian_1.2.15-8rpi_armhf.deb 
 #install SDL2 2.0.1 libs for ES2
