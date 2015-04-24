@@ -2,8 +2,8 @@
 # Get codes from /usr/include/SDL/SDL_keysym.h
 #Using default Mame key mapping
 A_1=306         #LeftControl
-B_1=32          #Space
-X_1=308         #LeftALt
+B_1=308         #LeftALt
+X_1=32          #Space
 Y_1=304         #LeftShift
 L_1=122         #z
 R_1=120         #x
@@ -16,8 +16,8 @@ DOWN_1=274      #Down
 QUIT=27         #Escape
 #player 2 keyboard controls, disabled by default
 A_2=97          #a
-B_2=113         #q
-X_2=115         #s
+B_2=115         #s
+X_2=113         #q
 Y_2=119         #w
 L_2=101         #e
 R_2=116         #t
@@ -48,12 +48,12 @@ JA_UD=1
 #player 2 button configuration
 A_2=10
 B_2=11
-X_2=12
-Y_2=13
-L_2=14
-R_2=15
-START_2=16
-SELECT_2=17
+X_2=15
+Y_2=16
+L_2=17
+R_2=18
+START_2=19
+SELECT_2=14
 #Joystick axis
 JA_LR_2=2
 JA_UD_2=3

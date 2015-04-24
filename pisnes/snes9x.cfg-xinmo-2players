@@ -47,18 +47,18 @@ ACCEL=3
 QLOAD=99
 QSAVE=99
 #Joystick axis
-JA_LR_1=0
-JA_UD_1=1
+JA_LR=0
+JA_UD=1
 
 # player 2 button
 A_2=10
 B_2=11
-X_2=12
-Y_2=13
-L_2=14
-R_2=15
+X_2=15
+Y_2=16
+L_2=17
+R_2=18
 START_2=10
-SELECT_2=16
+SELECT_2=19
 ACEEL=13
 #Joystick axis
 JA_LR_2=2
