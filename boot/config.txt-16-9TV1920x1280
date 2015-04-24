@@ -37,6 +37,21 @@ kernel=kernel.img
 # uncomment for composite PAL
 #sdtv_mode=2
 
+# What the Raspberry Pi 2's Overclock Settings Mean
+# arm_freq- Frequency of ARM in MHz.
+# core_freq -Frequency of GPU processor core in MHz. It has an impact on ARM performance since it drives L2 cache.sdram_freq -Frequency of SDRAM in MHz.
+# over_voltage -  ARM/GPU core voltage adjust. Values above 6 are only allowed when force_turbo or current_limit_override are specified (which set the warranty bit).
+# force_turbo -  Disables dynamic cpufreq driver and minimum settings below. Voids Warranty.
+# initial_turbo - Enables turbo mode from boot for the given value in seconds (up to 60) or until cpufreq sets a frequency. Default 0
+# arm_freq_min - Minimum value of arm_freq used for dynamic clocking.
+# core_freq_min - Minimum value of core_freq used for dynamic clocking.
+# sdram_freq_min - Minimum value of sdram_freq used for dynamic clocking.
+# temp_limit - Overheat protection. Sets clocks and voltages to default when the SoC reaches this Celsius value. Setting this higher than default voids warranty. Default 85
+# disable_splash - If set to 1, avoids the rainbow splash screen on boot.
+# boot_delay - Wait for x number of seconds in start.elf before loading kernel. Default 1
+# gpu_mem - GPU memory in megabyte. Sets the memory split between the ARM and GPU. ARM gets the remaining memory.
+
+
 
 # for more options see http://elinux.org/RPi_config.txt
 #start_x=0
