@@ -25,7 +25,7 @@
 	<view name="basic, detailed">
 	
 		<text name="system_name_1" extra="true">
-			<text>MAME</text>
+			<text>ADVANCEMAME</text>
 			<forceUppercase>1</forceUppercase>
 			<size>0.45 0.16</size>
 			<pos>0.527 0</pos>
