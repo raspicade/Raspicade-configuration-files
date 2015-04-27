@@ -103,11 +103,40 @@ kernel=kernel.img
 # for more options see http://elinux.org/RPi_config.txt
 #start_x=0
 #uncomment to overclock the arm. 700 MHz is the default.
-arm_freq=900
-gpu_freq=350
-core_freq=450
-sdram_freq=450
+#arm_freq=900
+#gpu_freq=350
+#core_freq=450
+#sdram_freq=450
 #over_voltage=6
+
+#uncomment to overclock the arm. 700 MHz is the default.
+#Pi1 High overclocking
+#arm_freq=900
+#gpu_freq=350
+#core_freq=450
+#sdram_freq=450
+#over_voltage=6
+
+#Pi1 Extreme overclocking
+arm_freq=1000
+gpu_freq=350
+core_freq=500
+sdram_freq=500
+over_voltage=6
+
+#Pi2 high overclocking
+#arm_freq=1000
+#sdram_freq=500
+#core_freq=500
+#over_voltage=2
+
+
+#Pi2 Overclock extrem
+#arm_freq=1100
+#sdram_freq=500
+#core_freq=500
+#over_voltage=6
+#temp_limit=80 #Will throttle to default clock speed if hit.
 
 #force video mode in 1024x768 60Hz for pc monitor
 hdmi_group=2
