@@ -15,3 +15,4 @@ cp /home/pi/pifba/fba2x.cfg-gamepads /home/pi/pifba/fba2x.cfg
 cp /home/pi/pisnes/snes9x.cfg-2players  /home/pi/pisnes/snes9x.cfg
 cp -f /home/pi/retro/retroarch.cfg-gamepads /home/pi/retro/retroarch.cfg
 cp /home/pi/.config/mupen64plus/mupen64plus.cfg-gamepads-auto /home/pi/.config/mupen64plus/mupen64plus.cfg
+cp /home/pi/.advance/advmame.rc-gamepads /home/pi/.advance/advmame.rc
