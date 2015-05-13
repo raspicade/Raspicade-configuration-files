@@ -15,3 +15,5 @@ cp /home/pi/pifba/fba2x.cfg-xinmo-2players /home/pi/pifba/fba2x.cfg
 cp /home/pi/pisnes/snes9x.cfg-xinmo-2players /home/pi/pisnes/snes9x.cfg
 cp -f /home/pi/retro/retroarch.cfg-xinmo-2players /home/pi/retro/retroarch.cfg
 cp /home/pi/.config/mupen64plus/mupen64plus.cfg-xinmo-2players /home/pi/.config/mupen64plus/mupen64plus.cfg
+#only for pi2
+cp /home/pi/.advance/advmame.rc-xinmo /home/pi/.advance/advmame.rc
