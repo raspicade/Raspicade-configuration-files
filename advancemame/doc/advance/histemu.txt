@@ -3,6 +3,25 @@
                           ============================
 
 
+ADVANCEMAME/MESS VERSION 1.4 2015/08
+====================================
+
+* Restored the missing keypress of coin1 broken on v1.3.
+* Imported the Cave PGM driver from ShmupMAME v3.0b.
+* Fixed build issue on AdvanceMESS about discrete.c file.
+
+
+ADVANCEMAME/MESS VERSION 1.3 2015/06
+====================================
+
+* Added support fo Haiku OS.
+* Included free ROMs gridlee, polyplay and robby.
+* Trick to reduce the input lag by one frame [Manlio De Pasquale].
+* Better effect selection if display_resizeeffect is 'auto'.
+* Changed the default of "magnify" to auto.
+* Fixed manpages format.
+
+
 ADVANCEMAME VERSION 1.2 2012/12
 ===============================
 

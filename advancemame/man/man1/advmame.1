@@ -1,29 +1,29 @@
 .TH "AdvanceMAME/MESS Emulator" 1
 .SH NAME
-advmame, advmess \(hy AdvanceMAME/MESS Emulator
+advmame, advmess \- AdvanceMAME/MESS Emulator
 .SH SYNOPSIS 
-advmame GAME [\(hydefault] [\(hyremove] [\(hycfg FILE]
+advmame GAME [\-default] [\-remove] [\-cfg FILE]
 .PD 0
 .PP
 .PD
-	[\(hylog] [\(hylistxml] [\(hyrecord FILE] [\(hyplayback FILE]
+	[\-log] [\-listxml] [\-record FILE] [\-playback FILE]
 .PD 0
 .PP
 .PD
-	[\(hyversion] [\(hyhelp]
+	[\-version] [\-help]
 .PD 0
 .PP
 .PD
 .PP
-advmess MACHINE [images...] [\(hydefault] [\(hyremove] [\(hycfg FILE]
+advmess MACHINE [images...] [\-default] [\-remove] [\-cfg FILE]
 .PD 0
 .PP
 .PD
-	[\(hylog] [\(hylistxml] [\(hyrecord FILE] [\(hyplayback FILE]
+	[\-log] [\-listxml] [\-record FILE] [\-playback FILE]
 .PD 0
 .PP
 .PD
-	[\(hyversion] [\(hyhelp]
+	[\-version] [\-help]
 .PD 0
 .PP
 .PD
@@ -36,7 +36,7 @@ also with normal PC Monitors.
 The major features are:
 .PD 0
 .IP \(bu
-Automatic creation of \(oqperfect\(cq video modes with the correct
+Automatic creation of \`perfect\' video modes with the correct
 size and clock.
 .IP \(bu
 A lot of video boards supported for direct hardware registers
@@ -47,21 +47,21 @@ Support for 8, 15, 16 and 32 bits video modes.
 Real hardware scanlines.
 .IP \(bu
 Software video image stretching by fractional factors, for
-example to play vertical games like \(a"Pac\(hyMan\(a" with
+example to play vertical games like \[dq]Pac\-Man\[dq] with
 horizontal Arcade Monitors or TVs.
 .IP \(bu
-Special \(oqscalex\(cq, \(oqscalek\(cq, \(oqlq\(cq, \(oqhq\(cq, and \(oqxbr\(cq effects to improve the aspect
+Special \`scalex\', \`scalek\', \`lq\', \`hq\', and \`xbr\' effects to improve the aspect
 with modern PC Monitors.
 .IP \(bu
-Special \(oqblit\(cq effects to improve the image quality in
+Special \`blit\' effects to improve the image quality in
 stretching.
 .IP \(bu
-Special \(oqrgb\(cq effects to simulate the aspect of a real Arcade
+Special \`rgb\' effects to simulate the aspect of a real Arcade
 Monitor.
 .IP \(bu
 Change of the video mode and other video options at runtime.
 .IP \(bu
-Support of Symmetric Multi\(hyProcessing (SMP) with a multiple
+Support of Symmetric Multi\-Processing (SMP) with a multiple
 thread architecture (only for Linux).
 .IP \(bu
 Sound and video recording in WAV, PNG and MNG files.
@@ -128,7 +128,7 @@ Turbo mode until pressed.
 Cocktail mode (flip the screen vertically).
 .HP 4
 .I PAD
-\(hy Mark the current time as the startup time of the game.
+\- Mark the current time as the startup time of the game.
 .HP 4
 .I CTRL + ENTER
 Start the sound and video recording.
@@ -210,64 +210,64 @@ This is the list of the available command line options:
 .TP
 .B GAME/MACHINE
 The game or machine to emulate. If the specified
-GAME/MACHINE is unknown, a list of possible \(oqguesses\(cq
+GAME/MACHINE is unknown, a list of possible \`guesses\'
 is printed.
 .TP
-.B \(hydefault
+.B \-default
 Add to the configuration file all the missing options
 with default values.
 .TP
-.B \(hyremove
+.B \-remove
 Remove from the configuration file all the options
 with default values.
 .TP
-.B \(hycfg FILE
+.B \-cfg FILE
 Select an alternate configuration file. In Linux and Mac
-OS X the you can prefix the file name with \(a"./\(a" to
+OS X the you can prefix the file name with \[dq]./\[dq] to
 load it from the current directory.
 .TP
-.B \(hylog
+.B \-log
 A very detailed log of operations is saved in
-a \(oq.log\(cq file. Very useful for debugging problems.
+a \`.log\' file. Very useful for debugging problems.
 .TP
-.B \(hylistxml
+.B \-listxml
 Outputs the internal MAME database in XML format.
 .TP
-.B \(hyrecord FILE
+.B \-record FILE
 Record all the game inputs in the specified file.
 The file is saved in the directory specified by the
-\(oqdir_inp\(cq configuration option.
+\`dir_inp\' configuration option.
 .TP
-.B \(hyplayback FILE
+.B \-playback FILE
 Play back the previously recorded game inputs in the
 specified file.
 .TP
-.B \(hyversion
-Print the version number, the low\(hylevel device drivers
+.B \-version
+Print the version number, the low\-level device drivers
 supported and the configuration directories.
 .TP
-.B \(hyhelp
+.B \-help
 Print a short command line help.
 .PP
 On the command line you can also specify all configuration
-options with the format \(hyOPTION ARGUMENT. For boolean options
-you don\(cqt need to specify the argument but you must use the
-\(hyOPTION or \(hynoOPTION format. For example:
+options with the format \-OPTION ARGUMENT. For boolean options
+you don\'t need to specify the argument but you must use the
+\-OPTION or \-noOPTION format. For example:
 .PP
 .RS 4
-advmame pacman \(hydevice_sound sb \(hynodisplay_scanlines
+advmame pacman \-device_sound sb \-nodisplay_scanlines
 .PD 0
 .PP
 .PD
 .RE
 .PP
 You can use short options if they are unambiguous. You can remove
-any prefix tag separated with \(oq_\(cq or truncate it.
-For example \(oq\(hydev_cartdrige\(cq can be written as \(oq\(hydev_cart\(cq,
-\(oq\(hycartdrige\(cq, \(oq\(hycart\(cq, ...
+any prefix tag separated with \`_\' or truncate it.
+For example \`\-dev_cartdrige\' can be written as \`\-dev_cart\',
+\`\-cartdrige\', \`\-cart\', ...
 .PP
-In Linux and Mac OS X you can also use \(oq\(hy\(hy\(cq before options instead of \(oq\(hy\(cq.
-In DOS and Windows you can also use \(oq/\(cq.
+In Linux and Mac OS X you can also use \`\-\-\' before options instead of \`\-\'.
+In DOS and Windows you can also use \`/\'.
 .SH FEATURES 
 This section contains a brief description of all the features
 of AdvanceMAME.
@@ -277,64 +277,64 @@ board to get the best possible video modes with always the
 correct size and aspect ratio.
 .PP
 You can control how the video modes are generated with the
-\(oqdisplay_adjust\(cq option. More details are in the \(oqinstall.txt\(cq
+\`display_adjust\' option. More details are in the \`install.txt\'
 file.
 .SS Video Menu 
-AdvanceMAME adds a new \(oqVideo\(cq menu in MAME to change the video
+AdvanceMAME adds a new \`Video\' menu in MAME to change the video
 options.
 .PP
 You can select the desired video mode, the resize type and the
 video effects.
 .PP
 The selected option is displayed at the right side of the menu,
-the effective value used for the option is displayed in \(oq[]\(cq.
+the effective value used for the option is displayed in \`[]\'.
 .SS Resize 
 AdvanceMAME supports many software stretching types of the
 game image. Generally they are not used, because a video
 mode of the correct size is automatically generated.
-But in some conditions it isn\(cqt possible, in this case the
+But in some conditions it isn\'t possible, in this case the
 image is stretched.
 .PP
-There are four stretch types: \(oqnone\(cq, \(oqinteger\(cq, \(oqmixed\(cq, \(oqfractional\(cq.
-You can control the type of stretching with the \(oqdisplay_resize\(cq option.
+There are four stretch types: \`none\', \`integer\', \`mixed\', \`fractional\'.
+You can control the type of stretching with the \`display_resize\' option.
 .PP
-The \(oqnone\(cq option simply disables any type of stretching.
-The \(oqinteger\(cq option allows only integer stretching in the
+The \`none\' option simply disables any type of stretching.
+The \`integer\' option allows only integer stretching in the
 horizontal and vertical directions. For example 1x2, 2x1, 2x2.
-The \(oqmixed\(cq option allows integer stretching in the horizontal
+The \`mixed\' option allows integer stretching in the horizontal
 direction and fractional stretching in the vertical direction.
 For example 1x1.23, 2x1.18.
-The \(oqfractional\(cq option allows fractional stretching in any
+The \`fractional\' option allows fractional stretching in any
 directions. For example 1.08x1.08, 1.34x1.78.
 .PP
-Usually the best choice is the \(oqmixed\(cq option. It\(cqs very fast
-and the image quality doesn\(cqt suffer too much.
+Usually the best choice is the \`mixed\' option. It\'s very fast
+and the image quality doesn\'t suffer too much.
 .SS Blit Effects 
 AdvanceMAME supports many special video effects to improve
-the image quality when it\(cqs stretched.
+the image quality when it\'s stretched.
 .PP
-There are a lot of video effects: \(oqnone\(cq, \(oqmax\(cq, \(oqmean\(cq,
-\(oqfilter\(cq, \(oqscalex\(cq, \(oqscalek\(cq, \(oqlq\(cq, \(oqhq\(cq and \(oqxbr\(cq.
-You can select the favorite effect with the \(oqdisplay_resizeeffect\(cq
+There are a lot of video effects: \`none\', \`max\', \`mean\',
+\`filter\', \`scalex\', \`scalek\', \`lq\', \`hq\' and \`xbr\'.
+You can select the favorite effect with the \`display_resizeeffect\'
 option, or from the runtime menu.
 .PP
-The \(oqnone\(cq effect simply duplicates and removes rows and lines
+The \`none\' effect simply duplicates and removes rows and lines
 when the image is stretched.
-The \(oqmax\(cq effect tries to save the image details checking the luminosity
+The \`max\' effect tries to save the image details checking the luminosity
 of the pixels in stretching. It ensures to have vertical and horizontal lines
 always of the same thickness.
-The \(oqmean\(cq effect tries to save the image details displaying the
+The \`mean\' effect tries to save the image details displaying the
 mean color of the pixels in stretching.
-The \(oqfilter\(cq effect applies a generic blur filter computing the
+The \`filter\' effect applies a generic blur filter computing the
 mean color in the horizontal and vertical directions. The best
 results are when the image is stretched almost by a double
 factor. When the image is enlarged the filter is applied after
-stretching; when reduced, it\(cqs applied before.
-The \(oqscalex\(cq, \(oqscalek\(cq, \(oqlq\(cq, \(oqhq\(cq and \(oqxbr\(cq effects add missing pixels
+stretching; when reduced, it\'s applied before.
+The \`scalex\', \`scalek\', \`lq\', \`hq\' and \`xbr\' effects add missing pixels
 trying to match the image patterns.
 .PP
-The \(oqscalex\(cq, \(oqscalek\(cq, \(oqlq\(cq, \(oqhq\(cq and \(oqxbr\(cq effects work only if the image is
-magnified. To enable it you should also use the \(oqmagnify\(cq option.
+The \`scalex\', \`scalek\', \`lq\', \`hq\' and \`xbr\' effects work only if the image is
+magnified. To enable it you should also use the \`magnify\' option.
 .SS RGB Effects 
 AdvanceMAME supports also some special video effects to simulate
 the aspect of the game as displayed in an old fashion Arcade
@@ -343,17 +343,17 @@ Monitor.
 You can simulate the RGB triads of the screen or the vertical and
 horizontal scanlines.
 .SS Mode Selection 
-In the \(oqVideo Mode\(cq submenu you can select the favorite video
+In the \`Video Mode\' submenu you can select the favorite video
 mode.
 .PP
-If you choose \(oqauto\(cq, the best video mode is chosen
+If you choose \`auto\', the best video mode is chosen
 automatically.
 .PP
-You can change the active video mode pressing \(oq,\(cq and \(oq.\(cq when
+You can change the active video mode pressing \`,\' and \`.\' when
 in game play.
 .PP
 You can force a specific video mode with the option
-\(oqdisplay_mode\(cq.
+\`display_mode\'.
 .SS Per game/resolution/frequency/orientation options 
 All the options are customizable in the configuration file for
 the single game or for a subset of games defined by the game
@@ -363,17 +363,17 @@ AdvanceMAME supports a basic script language capable to
 control an external hardware through the parallel port
 or keyboard led signals.
 .PP
-More details are in the \(oqscript.txt\(cq file.
+More details are in the \`script.txt\' file.
 .SS Aspect Ratio Control 
 AdvanceMAME tries always to display the game with the
 correct aspect ratio.
 .PP
 But if you want, you can permit a small aspect error
 to enlarge the effective game image on the screen.
-It\(cqs very useful to display vertical games on
+It\'s very useful to display vertical games on
 horizontal monitors and vice versa.
 .PP
-More details are in the description of the \(oqdisplay_expand\(cq
+More details are in the description of the \`display_expand\'
 option.
 .SS Speed Control 
 AdvanceMAME permits a special speed control of the game
@@ -383,12 +383,12 @@ You can play the game in a faster way, change arbitrarily the
 frame rate, skip the game startup process at the maximum speed,
 or skip the game animations pressing a key.
 .PP
-Press \(oqasterisk_pad\(cq to enable the \(oqturbo\(cq mode. Press \(oqminus_pad\(cq
+Press \`asterisk_pad\' to enable the \`turbo\' mode. Press \`minus_pad\'
 to mark the time of the real game start. The next time the game is
 started, it will execute very fast until this time.
 .PP
-More details are in the description of the \(oqsync_fps\(cq, \(oqsync_speed\(cq,
-\(oqsync_turbospeed\(cq and \(oqsync_startuptime\(cq options.
+More details are in the description of the \`sync_fps\', \`sync_speed\',
+\`sync_turbospeed\' and \`sync_startuptime\' options.
 .PP
 The video and audio synchronization uses an advanced algorithm,
 which ensure always the best performance.
@@ -401,7 +401,7 @@ If it detects that you have system too slow to play the game
 at full speed, it automatically disables any frame skipping.
 .PP
 If the underline Operand System allows that, AdvanceMAME release
-the CPU when it isn\(cqt used after computing each frame reducing the
+the CPU when it isn\'t used after computing each frame reducing the
 CPU occupation.
 .SS Audio Control 
 The audio volume is automatically adjusted to ensure
@@ -409,8 +409,8 @@ that all the emulated games have the same volume power.
 .PP
 An equalizer and a spectrum analyzer are also available.
 .PP
-More details are in the description of the \(oqsound_normalize\(cq
-and \(oqsound_equalizer\(cq options.
+More details are in the description of the \`sound_normalize\'
+and \`sound_equalizer\' options.
 .SS Exit Control 
 If you have a real Arcade Cabinet you can configure AdvanceMAME
 to automatically exit after some time of inactivity to save
@@ -419,45 +419,45 @@ your monitor screen.
 For some supported games you can force the display of an
 exit menu during the game play to prevent unwanted exit.
 .PP
-More details are in the description of the \(oqmisc_safequit\(cq,
-and \(oqinput_idleexit\(cq options.
+More details are in the description of the \`misc_safequit\',
+and \`input_idleexit\' options.
 .SS Input Control 
 AdvanceMAME supports a very fine control of the mapping
 of the analog and digital inputs. You can remap any input
 event using easy to maintain text configuration files.
 .PP
-More details are in the description of the \(oqinput_map\(cq
+More details are in the description of the \`input_map\'
 option.
 .SS Audio and Video Recording 
 AdvanceMAME can saves the game play in .WAV audio files and
 .MNG video files.
 .PP
-More details are in the description of the \(oqrecord_*\(cq
+More details are in the description of the \`record_*\'
 options.
 .SS User Interface 
 AdvanceMAME displays the user interface directly on the screen
 instead on the game image.
 .PP
-This means that the interface doesn\(cqt have applied the same video
-effects of the game, it isn\(cqt limited on the game area, it
-isn\(cqt recorded on video clips and you can customize the font.
+This means that the interface doesn\'t have applied the same video
+effects of the game, it isn\'t limited on the game area, it
+isn\'t recorded on video clips and you can customize the font.
 .PP
 Also, True Type fonts with alpha blending are supported.
 .PP
-More details are in the description of the \(oqui_*\(cq options.
+More details are in the description of the \`ui_*\' options.
 .SS Input Help 
 AdvanceMAME is able to display a help image containing the
 input mapping of the emulated game. Any input element has a
-different depending on the assigned player and if it\(cqs pressed
+different depending on the assigned player and if it\'s pressed
 or not.
 .PP
 The default image is a standard keyboard, with the used keys
 highlighted. If you have an Arcade cabinet you can create your
 personalized control image and select each region to highlight.
 .PP
-Press \(oqf1\(cq on the game play to display it.
+Press \`f1\' on the game play to display it.
 .PP
-More details are in the description of the \(oqui_help*\(cq options.
+More details are in the description of the \`ui_help*\' options.
 .SS Input Text Configuration File 
 All the user customizations are stored in a single textual
 configuration file and not in a lot of .cfg file like other MAME ports.
@@ -467,24 +467,24 @@ They are also more compact because only the difference from the
 default is saved.
 .PP
 They are independent of the internal MAME structure, so, when it
-changes, you don\(cqt lose the customizations.
+changes, you don\'t lose the customizations.
 .PP
-More details are in the description of the \(oqinput_setting\(cq,
-\(oqinput_dipswitch\(cq, \(oqinput_configswitch\(cq options.
+More details are in the description of the \`input_setting\',
+\`input_dipswitch\', \`input_configswitch\' options.
 .SS Cocktail 
 For cocktail arcade cabinets you can manually flip vertically the
 screen for games without cocktail support.
 .PP
-Press \(oqslash_pad\(cq to flip the screen.
+Press \`slash_pad\' to flip the screen.
 .SS Dipswitches Control 
 You can customize with specialized options the game difficulty and
 the game freeplay. These options are smart enough to solve
 common ambiguities and errors in the game dipswitches definitions.
 .PP
-More details are in the description of the \(oqmisc_diffucilty\(cq and
-\(oqmisc_freeplay\(cq options.
+More details are in the description of the \`misc_diffucilty\' and
+\`misc_freeplay\' options.
 .SS LCD Panel 
-AdvanceMAME is able to talk to an \(oqlcdproc\(cq server located anywhere
+AdvanceMAME is able to talk to an \`lcdproc\' server located anywhere
 in internet to display arbitrary information on a real or simulated
 LCD panel.
 .SH USE CASES 
@@ -496,24 +496,24 @@ acceleration of your video board to stretch the game image
 to fit the exact resolution of your LCD monitor.
 With an HighDefinition monitor (1920x1080/1200), this stretching
 is not noticeable and you get an image with quality comparable
-with a CRT Multi\(hySync monitor.
+with a CRT Multi\-Sync monitor.
 You can also use a bunch of video effects to remove the
 annoying pixelation or to emulate old stylish CRT aspect.
-.SS With a CRT Multi\(hySync Monitor 
-On a PC Multi\(hySync monitor you can get any resolution at any
+.SS With a CRT Multi\-Sync Monitor 
+On a PC Multi\-Sync monitor you can get any resolution at any
 Vertical Frequency. In this case AdvanceMAME always generates
-a \(oqperfect\(cq video mode with the correct size and clock. It
-doesn\(cqt require any type of stretching.
-For example for the game \(a"Bomb Jack\(a" a video mode of 400x256
+a \`perfect\' video mode with the correct size and clock. It
+doesn\'t require any type of stretching.
+For example for the game \[dq]Bomb Jack\[dq] a video mode of 400x256
 at 60 Hz (perfect size and perfect frequency) is used.
 .SS With a CRT VGA Monitor/Fixed Frequency Monitor/Arcade Monitor 
 On Fixed Frequency monitors you are physically limited on
 the choice of Horizontal Frequency in the video mode. In this
-case AdvanceMAME takes care of your monitor\(cqs limitations
-and in the most cases it\(cqs able to use a video mode with the
+case AdvanceMAME takes care of your monitor\'s limitations
+and in the most cases it\'s able to use a video mode with the
 correct size but not with the correct frequency due to the
-monitor\(cqs limitations.
-For example for the game \(a"Pac\(hyMan\(a" and a VGA monitor (31.5 kHz)
+monitor\'s limitations.
+For example for the game \[dq]Pac\-Man\[dq] and a VGA monitor (31.5 kHz)
 a video mode of 400x288 at 100 Hz (perfect size) is used.
 .SS With a NTSC or PAL TV 
 On a TV you are physically limited to use both fixed Horizontal
@@ -524,15 +524,15 @@ interlaced) and for a PAL TV 288 rows (576 if interlaced).
 In this case AdvanceMAME uses a video mode with the prefixed
 number of rows but with the correct number of columns. So,
 ONLY a vertical image stretching is required.
-For example for the game \(a"Pac\(hyMan\(a" on a NTSC TV a video mode
+For example for the game \[dq]Pac\-Man\[dq] on a NTSC TV a video mode
 of 400x240 (perfect horizontal size) is used.
 For stretching some special algorithms are used to minimize
 the lose of details.
-.SS With a Multi\(hyformat NTSC and PAL TV 
+.SS With a Multi\-format NTSC and PAL TV 
 If your TV supports both formats, AdvanceMAME automatically
 chooses the format that better fits the game requirements.
-For example for the game \(a"Mr. Do!\(a" a video mode of 336x240
-NTSC (perfect size) is used. For the game \(a"Pac\(hyMan\(a" a video mode
+For example for the game \[dq]Mr. Do!\[dq] a video mode of 336x240
+NTSC (perfect size) is used. For the game \[dq]Pac\-Man\[dq] a video mode
 of 400x288 PAL (perfect size) is used.
 .SH OTHER PORTS 
 This section compares the AdvanceMAME video support with the
@@ -552,7 +552,7 @@ Depending on the type of your video drivers you can sometimes
 edit the prefixed list of video modes.
 .PP
 The TV support depends on the video drivers of your board and
-it\(cqs generally limited at the interlaced mode 640x480.
+it\'s generally limited at the interlaced mode 640x480.
 Arcade monitors are used as NTSC TVs.
 .PP
 Generally this port is limited by Windows to get the best from
@@ -567,7 +567,7 @@ able to improve the image quality.
 .PP
 This also helps when using Arcade Monitors with specific modelines,
 because AdvanceMAME is able to streatch the image using special effects
-like \(cqmax\(cq that avoids to lose pixels.
+like \'max\' that avoids to lose pixels.
 .SS DOS MAME 
 The official DOS MAME is limited to use only the standard
 VESA resolutions. Generally they are only 320x200,
@@ -577,22 +577,22 @@ The Arcade/TV support is limited at the mode 640x480 for the
 ATI boards.
 .SH CONFIGURATION 
 In DOS and Windows the configuration options are read from the
-files \(oqadvmame.rc\(cq and \(oqadvmess.rc\(cq in the current
+files \`advmame.rc\' and \`advmess.rc\' in the current
 directory.
 .PP
 In Linux and Mac OS X the configuration options are read from the
-files \(oqadvmame.rc\(cq and \(oqadvmess.rc\(cq in the $host, $data and
+files \`advmame.rc\' and \`advmess.rc\' in the $host, $data and
 the $home directory.
-The $host directory is \(oq$SYSCONFDIR\(cq, where $SYSCONFDIR is the
-\(oqsysconfdir\(cq directory configured with the \(oqconfigure\(cq script.
-The default is \(oq/usr/local/etc\(cq.
-The $data directory is \(oq$DATADIR/advance\(cq, where $DATADIR is the
-\(oqdatadir\(cq directory configured with the \(oqconfigure\(cq script.
-The default is \(oq/usr/local/share\(cq.
-The $home directory is \(oq$ADVANCE\(cq, where $ADVANCE is the value of the
+The $host directory is \`$SYSCONFDIR\', where $SYSCONFDIR is the
+\`sysconfdir\' directory configured with the \`configure\' script.
+The default is \`/usr/local/etc\'.
+The $data directory is \`$DATADIR/advance\', where $DATADIR is the
+\`datadir\' directory configured with the \`configure\' script.
+The default is \`/usr/local/share\'.
+The $home directory is \`$ADVANCE\', where $ADVANCE is the value of the
 ADVANCE environment variable when the program is run.
 If the ADVANCE environment variable is missing the $home directory
-is \(oq$HOME/.advance\(cq where $HOME is the value of the HOME environment
+is \`$HOME/.advance\' where $HOME is the value of the HOME environment
 variable.
 If both the ADVANCE and HOME environment variables are missing the
 $data directory became also the $home directory.
@@ -602,16 +602,16 @@ The priority of the options is in the order: $host, $home and $data.
 The $home directory is also used to write all the information
 by the program. The files in the $host and $data directory are only read.
 .PP
-You can include an additional configuration files with the \(oqinclude\(cq
+You can include an additional configuration files with the \`include\'
 option. In DOS and Windows the files are searched in the current directory.
 In Linux and Mac OS X the files are searched in the $home directory if
 they are expressed as a relative path. You can force the search in the
-current directory prefixing the file with \(oq./\(cq.
-To include more than one file you must divide the names with \(oq;\(cq in
-DOS and Windows, and with \(oq:\(cq in Linux and Mac OS X.
+current directory prefixing the file with \`./\'.
+To include more than one file you must divide the names with \`;\' in
+DOS and Windows, and with \`:\' in Linux and Mac OS X.
 .PP
 You can force the creation of a default configuration file with the
-command line option \(oq\(hydefault\(cq.
+command line option \`\-default\'.
 .PP
 In the configuration file the options are specified in this format:
 .PP
@@ -622,21 +622,21 @@ In the configuration file the options are specified in this format:
 .PD
 .RE
 .PP
-If the SECTION is omitted the \(oq\(cq (empty) section is assumed.
+If the SECTION is omitted the \`\' (empty) section is assumed.
 .PP
-You can split long options in a multi\(hyline format ending the line
-with the char \(oq\(rs\(cq:
+You can split long options in a multi\-line format ending the line
+with the char \`\\\':
 .PP
 .RS 4
-[SECTION/]OPTION FIRST_LINE \(rs
+[SECTION/]OPTION FIRST_LINE \\
 .PD 0
 .PP
 .PD
-	SECOND_LINE \(rs
+	SECOND_LINE \\
 .PD 0
 .PP
 .PD
-	... \(rs
+	... \\
 .PD 0
 .PP
 .PD
@@ -651,57 +651,57 @@ sections in the following order:
 .RS 4
 .PD 0
 .HP 4
-.I \(oqSYSTEM[SOFTWARE]\(cq
+.I \`SYSTEM[SOFTWARE]\'
 The short system name and the loaded
-software on the command line, like \(oqti99_4a[ti\(hyinva]\(cq,
-\(oqa7800[digdug]\(cq and \(oqnes[commando]\(cq.
+software on the command line, like \`ti99_4a[ti\-inva]\',
+\`a7800[digdug]\' and \`nes[commando]\'.
 .HP 4
-.I \(oqGAME\(cq
-The short game (or system) name, like \(oqpacman\(cq,
-\(oqti99_4a\(cq and \(oqnes\(cq.
+.I \`GAME\'
+The short game (or system) name, like \`pacman\',
+\`ti99_4a\' and \`nes\'.
 .HP 4
-.I \(oqPARENT\(cq
+.I \`PARENT\'
 If present, the parent name of the game,
-like \(oqpuckman\(cq.
+like \`puckman\'.
 .HP 4
-.I \(oqBIOS\(cq
+.I \`BIOS\'
 If present, the bios name of the game,
-like \(oqneogeo\(cq.
+like \`neogeo\'.
 .HP 4
-.I \(oqRESOLUTIONxCLOCK\(cq
+.I \`RESOLUTIONxCLOCK\'
 The resolution and the clock of the
-game, like \(oq244x288x60\(cq for raster games or
-\(oqvector\(cq for vector games. If the vertical clock
-is a real value, it\(cqs rounded downwards to the
+game, like \`244x288x60\' for raster games or
+\`vector\' for vector games. If the vertical clock
+is a real value, it\'s rounded downwards to the
 nearest integer.
 .HP 4
-.I \(oqRESOLUTION\(cq
+.I \`RESOLUTION\'
 The resolution of the game, like
-\(oq244x288\(cq for raster games or \(oqvector\(cq for
+\`244x288\' for raster games or \`vector\' for
 vector games.
 .HP 4
-.I \(oqORIENTATION\(cq
-The game orientation. One of \(oqvertical\(cq,
-\(oqhorizontal\(cq.
+.I \`ORIENTATION\'
+The game orientation. One of \`vertical\',
+\`horizontal\'.
 .HP 4
-.I \(oqCONTROLLER\(cq
-The game input device. One of \(oqjoy4way\(cq,
-\(oqjoy8way\(cq, \(oqdoublejoy4way\(cq, \(oqdoublejoy8way\(cq,
-\(oqpaddle\(cq, \(oqdial\(cq, \(oqtrackball\(cq, \(oqstick\(cq, \(oqlightgun\(cq,
-\(oqmouse\(cq.
+.I \`CONTROLLER\'
+The game input device. One of \`joy4way\',
+\`joy8way\', \`doublejoy4way\', \`doublejoy8way\',
+\`paddle\', \`dial\', \`trackball\', \`stick\', \`lightgun\',
+\`mouse\'.
 .HP 4
-.I \(oqNplayer\(cq
-Number of players in the game. One of \(oq1player\(cq,
-\(oq2player\(cq, \(oq3player\(cq, ...
+.I \`Nplayer\'
+Number of players in the game. One of \`1player\',
+\`2player\', \`3player\', ...
 .HP 4
-.I \(oq\(cq
+.I \`\'
 The default empty section.
 .PD
 .RE
 .PP
-For example for the game \(oqpacman\(cq the following sections are
-read: \(oqpacman\(cq, \(oqpuckman\(cq, \(oq224x288x60\(cq, \(oq224x288\(cq, \(oqvertical\(cq,
-\(oqjoy4way\(cq, \(oq2player\(cq and \(oq\(cq.
+For example for the game \`pacman\' the following sections are
+read: \`pacman\', \`puckman\', \`224x288x60\', \`224x288\', \`vertical\',
+\`joy4way\', \`2player\' and \`\'.
 .PP
 You can override any global options inserting new options in
 any of the sections of the game.
@@ -738,7 +738,7 @@ Loads a specific device for the AdvanceMESS emulator. These
 options are mainly used on the command line to specify the
 machine software to load.
 The file specified is searched in the directory list specified
-in the \(oqdir_image\(cq option.
+in the \`dir_image\' option.
 .PP
 dev_COMMAND FILE
 .PD 0
@@ -790,11 +790,11 @@ Load a quickload.
 Examples:
 .PP
 .RS 4
-advmess ti99_4a \(hydev_cartridge attackg.bin
+advmess ti99_4a \-dev_cartridge attackg.bin
 .PD 0
 .PP
 .PD
-advmess ti99_4a \(hycart alpinerc.bin \(hycart alpinerg.bin
+advmess ti99_4a \-cart alpinerc.bin \-cart alpinerg.bin
 .PD 0
 .PP
 .PD
@@ -803,8 +803,8 @@ advmess ti99_4a \(hycart alpinerc.bin \(hycart alpinerg.bin
 This section describes the options used to customize the
 directories used by the program.
 .SS dir_* 
-Specify all the support directories. In DOS and Windows use the \(oq;\(cq
-char as directory separator. In Linux and Mac OS X use the \(oq:\(cq char.
+Specify all the support directories. In DOS and Windows use the \`;\'
+char as directory separator. In Linux and Mac OS X use the \`:\' char.
 .PP
 dir_* DIR[;DIR]... (DOS, Windows)
 .PD 0
@@ -821,7 +821,7 @@ Options:
 .HP 4
 .I dir_rom
 Multi directory specification for the
-AdvanceMAME \(oqrom\(cq files and AdvanceMESS \(oqbios\(cq
+AdvanceMAME \`rom\' files and AdvanceMESS \`bios\'
 files.
 .HP 4
 .I dir_image
@@ -834,35 +834,35 @@ disk image differential files.
 .HP 4
 .I dir_sample
 Multi directory specification for the
-zipped \(oqsample\(cq files. Only the zipped format
+zipped \`sample\' files. Only the zipped format
 is supported.
 .HP 4
 .I dir_artwork
 Multi directory specification for the
-zipped \(oqartwork\(cq files. Only the zipped format
+zipped \`artwork\' files. Only the zipped format
 is supported.
 .HP 4
 .I dir_nvram
-Single directory for \(oqnvram\(cq files.
+Single directory for \`nvram\' files.
 .HP 4
 .I dir_memcard
-Single directory for \(oqmemcard\(cq files.
+Single directory for \`memcard\' files.
 .HP 4
 .I dir_hi
-Single directory for \(oqhi\(cq files.
+Single directory for \`hi\' files.
 .HP 4
 .I dir_inp
-Single directory for \(oqinp\(cq files.
+Single directory for \`inp\' files.
 .HP 4
 .I dir_sta
-Single directory for \(oqsta\(cq files.
+Single directory for \`sta\' files.
 .HP 4
 .I dir_snap
-Single directory for the \(oqsnapshot\(cq
+Single directory for the \`snapshot\'
 files.
 .HP 4
 .I dir_crc
-Single directory for the \(oqcrc\(cq files.
+Single directory for the \`crc\' files.
 .PD
 .RE
 .PP
@@ -951,10 +951,10 @@ $home/crc
 .RE
 .PP
 If a not absolute dir is specified, in Linux and Mac OS X
-it\(cqs expanded as \(a"$home/DIR:$data/DIR\(a". In DOS and Windows
-it\(cqs maintained relative.
+it\'s expanded as \[dq]$home/DIR:$data/DIR\[dq]. In DOS and Windows
+it\'s maintained relative.
 .PP
-For the \(oqdir_rom\(cq and \(oqdir_image\(cq the following file
+For the \`dir_rom\' and \`dir_image\' the following file
 combinations are tried:
 .PD 0
 .IP \(bu
@@ -969,15 +969,15 @@ Where DIR is substituted with the directories specified, GAME
 is the name of the game or machine emulated, ROM is the rom
 name and EXT is the rom extension.
 .PP
-For the files searched in the \(oqdir_image\(cq option you can also
+For the files searched in the \`dir_image\' option you can also
 specify a different zip name prefixing the rom name
-with the zip name without extension and the \(oq=\(cq char.
-For example to run the \(oqti99_4a\(cq emulator and load the
-cartdriges \(oqalpinerc.bin\(cq and \(oqalpinerg.bin\(cq both contained in
-the zip file \(oqalpiner.zip\(cq you can use this syntax:
+with the zip name without extension and the \`=\' char.
+For example to run the \`ti99_4a\' emulator and load the
+cartdriges \`alpinerc.bin\' and \`alpinerg.bin\' both contained in
+the zip file \`alpiner.zip\' you can use this syntax:
 .PP
 .RS 4
-advmess ti99_4a \(hycart alpiner=alpinerc.bin \(hycart alpiner=alpinerg.bin
+advmess ti99_4a \-cart alpiner=alpinerc.bin \-cart alpiner=alpinerg.bin
 .PD 0
 .PP
 .PD
@@ -991,15 +991,15 @@ display.
 .SS device_video_* 
 These options are used to customize the video drivers.
 .PP
-All the \(oqdevice_video_*\(cq options described in the \(oqadvdev.txt\(cq file
+All the \`device_video_*\' options described in the \`advdev.txt\' file
 can be used.
 .PP
-If you use a \(oqSystem\(cq video driver, you don\(cqt need to set these
+If you use a \`System\' video driver, you don\'t need to set these
 options. They are mostly ignored.
 .PP
-With a \(oqGenerate\(cq video drivers these options are used to select
+With a \`Generate\' video drivers these options are used to select
 and create the correct video mode. They are mandatory. You can use
-the \(oqadvcfg\(cq utility to set them interactively.
+the \`advcfg\' utility to set them interactively.
 .SS display_mode 
 Selects a specific modeline by its name.
 .PP
@@ -1014,7 +1014,7 @@ Options:
 .HP 4
 .I MODELINE_NAME
 Specific modeline, as named with
-the \(oqadvv\(cq utility.
+the \`advv\' utility.
 .HP 4
 .I auto
 Automatically chooses the best modeline
@@ -1027,7 +1027,7 @@ option removes the need of any software stretching improving a
 lot the game image.
 .PP
 For an introduction on how the program operates on video mode,
-you can see the \(oqinstall.txt\(cq file.
+you can see the \`install.txt\' file.
 .PP
 display_adjust none | x | clock | xclock | generate_exact
 .PD 0
@@ -1052,27 +1052,27 @@ available modelines (default).
 .HP 4
 .I x
 Adjusts the available modeline horizontal resolution
-to match the game image\(cqs size. The stretched modeline
+to match the game image\'s size. The stretched modeline
 keeps all the clock attributes of the original
 modeline. Also all other modeline attributes,
 like doublescan and interlace, are maintained.
 .HP 4
 .I clock
-Adjusts the available modeline\(cqs vertical clock
-to match the game\(cqs frame rate.
+Adjusts the available modeline\'s vertical clock
+to match the game\'s frame rate.
 .HP 4
 .I xclock
-Adjusts the available modeline\(cqs horizontal resolution
+Adjusts the available modeline\'s horizontal resolution
 and the vertical clock.
 .HP 4
 .I generate_exact
 Creates automatically some new modelines using
-the format specified on the \(oqdevice_video_format\(cq
-option. The generated modelines will be named \(oqgenerate\(hy*\(cq.
-Check the \(oqadvdef.txt\(cq file for the description of
-the \(oqdevice_video_format\(cq option or simply use the
-\(oqadvcfg\(cq utility to set it up correctly.
-If the \(oqdevice_video_format\(cq option isn\(cqt
+the format specified on the \`device_video_format\'
+option. The generated modelines will be named \`generate\-*\'.
+Check the \`advdef.txt\' file for the description of
+the \`device_video_format\' option or simply use the
+\`advcfg\' utility to set it up correctly.
+If the \`device_video_format\' option isn\'t
 specified a default value for your monitor clock
 limits is guessed.
 .HP 4
@@ -1100,27 +1100,27 @@ are favorite over mode with a correct size.
 .PD
 .RE
 .PP
-The \(oqgenerate\(cq options are able to create at runtime all the
-required modelines. You don\(cqt need to create a list of modelines
+The \`generate\' options are able to create at runtime all the
+required modelines. You don\'t need to create a list of modelines
 manually.
 .PP
-The not \(oqgenerate\(cq options use only the modelines defined with
-the \(oqdevice_video_modeline\(cq option in the configuration file.
-You can add them manually or using the \(oqadvv\(cq utility.
-Check the \(oqadvdev.txt\(cq file for more details on the
-\(oqdevice_video_modeline\(cq option.
+The not \`generate\' options use only the modelines defined with
+the \`device_video_modeline\' option in the configuration file.
+You can add them manually or using the \`advv\' utility.
+Check the \`advdev.txt\' file for more details on the
+\`device_video_modeline\' option.
 .PP
-Of all the \(oqgenerate\(cq options, the \(oqgenerate_yclock\(cq is the
-suggested and the most powerful. The \(oqadvcfg\(cq utility always
-sets the \(oqgenerate_yclock\(cq option in your configuration file.
+Of all the \`generate\' options, the \`generate_yclock\' is the
+suggested and the most powerful. The \`advcfg\' utility always
+sets the \`generate_yclock\' option in your configuration file.
 .PP
-Of all the not \(oqgenerate\(cq options, the \(oqxclock\(cq is the
+Of all the not \`generate\' options, the \`xclock\' is the
 suggested and the most powerful.
 .PP
-If you can\(cqt get good result with the \(oqgenerate\(cq options you
-should create a list of modelines and try with the \(oqxclock\(cq value.
-You don\(cqt need to duplicate the same modeline with different
-horizontal resolutions and/or the clocks, because the \(oqxclock\(cq
+If you can\'t get good result with the \`generate\' options you
+should create a list of modelines and try with the \`xclock\' value.
+You don\'t need to duplicate the same modeline with different
+horizontal resolutions and/or the clocks, because the \`xclock\'
 value allows the program to adjust them.
 Instead, you should create a wide set of different vertical
 resolutions on which the video mode can be chosen.
@@ -1161,14 +1161,14 @@ YUV mode in the YUY2 format.
 .PD
 .RE
 .PP
-Note that the 24 bit color mode isn\(cqt supported.
+Note that the 24 bit color mode isn\'t supported.
 .PP
 The modes are called bgr because in the video memory the order of
 the color channel is: Blue, Green, Red.
 .SS display_resize 
 Suggests the favorite image stretching when a video mode
-with the correct size isn\(cqt available.
-This option doesn\(cqt have any effect for vector games, they are
+with the correct size isn\'t available.
+This option doesn\'t have any effect for vector games, they are
 always stretched to fit the whole screen.
 .PP
 display_resize none | integer | mixed | fractional
@@ -1195,7 +1195,7 @@ Fractional stretch (default).
 .PD
 .RE
 .PP
-The \(oqfractional\(cq option involves a slowdown, so use the \(oqmixed\(cq
+The \`fractional\' option involves a slowdown, so use the \`mixed\'
 option if you have a really slow machine.
 .PP
 Examples:
@@ -1208,8 +1208,8 @@ display_resize mixed
 .RE
 .SS display_magnify 
 Suggests the use of a double or bigger resolution video mode.
-It is mainly used to enable the \(oqscalex\(cq, \(oqscalek\(cq, \(oqlq\(cq, \(oqhq\(cq and \(oqxbr\(cq
-effects. This option doesn\(cqt have any effect for vector games.
+It is mainly used to enable the \`scalex\', \`scalek\', \`lq\', \`hq\' and \`xbr\'
+effects. This option doesn\'t have any effect for vector games.
 .PP
 display_magnify auto | 1 | 2 | 3 | 4
 .PD 0
@@ -1292,7 +1292,7 @@ Options:
 .PD 0
 .HP 4
 .I no
-Doesn\(cqt use any buffering (default).
+Doesn\'t use any buffering (default).
 .HP 4
 .I yes
 Use the best buffering available.
@@ -1302,7 +1302,7 @@ Use the best buffering available.
 Synchronizes the video display with the video beam instead of
 using the CPU timer. This option can be used only if the
 selected video mode has an appropriate refresh rate.
-To ensure this you can use the option \(oqdisplay_adjust\(cq to allow
+To ensure this you can use the option \`display_adjust\' to allow
 a clock correction of the video mode.
 .PP
 display_vsync yes | no
@@ -1340,7 +1340,7 @@ Options:
 Resets to text mode (default).
 .HP 4
 .I no
-Doesn\(cqt change the video mode.
+Doesn\'t change the video mode.
 .PD
 .RE
 .SS display_frameskip 
@@ -1366,13 +1366,13 @@ value 1.
 .PD
 .RE
 .PP
-Use \(oqf11\(cq to display the speed your computer is actually
+Use \`f11\' to display the speed your computer is actually
 reaching. If it is below 100%, increase the frame skip value.
-You can press \(oqf8/f9\(cq to change frame skip while running the game.
+You can press \`f8/f9\' to change frame skip while running the game.
 When set to auto (default), the frame skip setting is
 dynamically adjusted during runtime to display the maximum
 possible frames without dropping below the 100% speed.
-Pressing \(oqf10\(cq you can enable and disable the throttle
+Pressing \`f10\' you can enable and disable the throttle
 synchronization.
 .PP
 Examples:
@@ -1513,7 +1513,7 @@ This section describes the options used to customize the display
 effects.
 .SS display_resizeeffect 
 When a video mode is smaller or bigger than the original arcade
-screen, the \(oqresizeeffect\(cq option controls the type of the
+screen, the \`resizeeffect\' option controls the type of the
 transformation applied.
 .PP
 display_resizeeffect auto | none | max | mean | filter
@@ -1533,10 +1533,10 @@ Options:
 Selects automatically the best effect (default).
 This selection is list based, and may be
 incomplete.
-If the scale factor is 2, 3 o 4 the \(oqxbr\(cq effect
+If the scale factor is 2, 3 o 4 the \`xbr\' effect
 is selected. The effect is automatically downgraded
-to \(oqscalek\(cq or \(oqscalex\(cq if the emulation is too slow.
-On the other cases the \(oqmean\(cq or \(oqmax\(cq effect
+to \`scalek\' or \`scalex\' if the emulation is too slow.
+On the other cases the \`mean\' or \`max\' effect
 is selected.
 .HP 4
 .I none
@@ -1549,7 +1549,7 @@ In expansion duplicate columns and rows using the
 darkest pixels versus the lightest.
 Supported in both rgb and palette video modes.
 It works best for the games with black
-background or without scrolling. Like \(a"Pac\(hyMan\(a".
+background or without scrolling. Like \[dq]Pac\-Man\[dq].
 This effect ensures to have always rows and columns
 of the same thickness.
 .HP 4
@@ -1560,12 +1560,12 @@ columns and rows that are the mean of previous
 and next lines.
 Supported only in rgb video modes.
 It works best for the games with animated
-or scrolling background. Like \(a"1941\(a".
+or scrolling background. Like \[dq]1941\[dq].
 .HP 4
 .I filter
 It removes or duplicates columns and rows with
 a low pass filter in the x and the y directions.
-It\(cqs a simple FIR filter with two points of
+It\'s a simple FIR filter with two points of
 equal value.
 Supported only in rgb video modes.
 .HP 4
@@ -1573,7 +1573,7 @@ Supported only in rgb video modes.
 It adds the missing pixels matching the
 original bitmap pattern.
 It uses a 3x3 mapping analysis with 4 comparisons.
-It doesn\(cqt interpolate pixels and it compares colors
+It doesn\'t interpolate pixels and it compares colors
 for equality.
 If works only for expansion factor of 2, 3 and 4.
 .HP 4
@@ -1612,7 +1612,7 @@ It works only for expansion factor of 2, 3 and 4.
 .SS display_rgbeffect 
 Selects a special effect to simulate the aspect of an Arcade Monitor
 with a PC monitor. The resulting image is better when you use a
-big video mode. These effects require a RGB video mode, they don\(cqt
+big video mode. These effects require a RGB video mode, they don\'t
 work with palettized or YUV modes.
 .PP
 display_rgbeffect none | triad3dot | triad6dot
@@ -1698,7 +1698,7 @@ Apply a vertical filter.
 .RE
 .PP
 If your monitor uses a swapped order for interlaced rows, using the
-\(oqeven\(cq or \(oqodd\(cq effect you can probably fix the image.
+\`even\' or \`odd\' effect you can probably fix the image.
 .PP
 The effects operate on the rows in the following way:
 .PP
@@ -1829,7 +1829,7 @@ Enables the artwork (default for backdrop
 and overlay).
 .HP 4
 .I no
-Doesn\(cqt display the artwork (default for
+Doesn\'t display the artwork (default for
 bezel).
 .PD
 .RE
@@ -1849,14 +1849,14 @@ Options:
 Crops the artwork (default).
 .HP 4
 .I no
-Doesn\(cqt crop the artwork.
+Doesn\'t crop the artwork.
 .PD
 .RE
 .SS Display Vector Configuration Options 
 This section describes the options used to customize the display
 of vector games.
 .SS display_antialias 
-Enables or disables the anti\(hyaliasing for vector games.
+Enables or disables the anti\-aliasing for vector games.
 .PP
 display_antialias yes | no
 .PD 0
@@ -1868,10 +1868,10 @@ Options:
 .PD 0
 .HP 4
 .I yes
-Anti\(hyaliasing enabled (default)
+Anti\-aliasing enabled (default)
 .HP 4
 .I no
-Anti\(hyaliasing disabled.
+Anti\-aliasing disabled.
 .PD
 .RE
 .SS display_beam 
@@ -1904,7 +1904,7 @@ Options:
 .PD 0
 .HP 4
 .I FACTOR
-A float in the range 0.0 \(hy 100.0
+A float in the range 0.0 \- 100.0
 (default 0).
 .PD
 .RE
@@ -1928,7 +1928,7 @@ Options:
 .PD 0
 .HP 4
 .I FACTOR
-A float in the range 0.5 \(hy 3.0
+A float in the range 0.5 \- 3.0
 (default 1.5).
 .PD
 .RE
@@ -1937,7 +1937,7 @@ This section describes the options used to customize the sound.
 .SS device_sound_* 
 These options are used to customize the audio drivers.
 .PP
-All the \(oqdevice_sound_*\(cq options defined in the \(oqadvdev.txt\(cq
+All the \`device_sound_*\' options defined in the \`advdev.txt\'
 file can be used.
 .SS sound_mode 
 Sets the sound output mode.
@@ -1953,7 +1953,7 @@ Options:
 .HP 4
 .I auto
 Use mono if the emulated game is mono
-or stereo if it\(cqs stereo (default).
+or stereo if it\'s stereo (default).
 .HP 4
 .I mono
 Use always mono. The game stereo channels
@@ -1966,7 +1966,7 @@ is duplicated.
 .I surround
 Use a fake surround effect. With
 stereo games the right channel plays part of
-the left channel as negate samples and vice\(hyversa.
+the left channel as negate samples and vice\-versa.
 With mono games the left channel is the negation of
 the right channel. This means that with surround
 enabled the output is always stereo.
@@ -1993,7 +1993,7 @@ Sample rate. Common values are 11025, 22050,
 .PD
 .RE
 .PP
-If the sound driver doesn\(cqt support the specified sample rate a
+If the sound driver doesn\'t support the specified sample rate a
 different value is selected.
 .SS sound_volume 
 Sets the global sound volume.
@@ -2008,15 +2008,15 @@ Options:
 .PD 0
 .HP 4
 .I VOLUME
-The volume attenuation in dB (default \(hy3).
-The attenuation is a negative value from \(hy40 to 0.
+The volume attenuation in dB (default \-3).
+The attenuation is a negative value from \-40 to 0.
 .PD
 .RE
 .PP
 Examples:
 .PP
 .RS 4
-sound_volume \(hy5
+sound_volume \-5
 .PD 0
 .PP
 .PD
@@ -2025,7 +2025,7 @@ sound_volume \(hy5
 Sets the sound gain volume. This option can be used to
 adjust the volume of some games to have all the games with
 the same volume.
-If the \(oqsound_normalize\(cq option is active this value is
+If the \`sound_normalize\' option is active this value is
 also automatically updated in the game play and you cannot
 change it manually.
 .PP
@@ -2045,7 +2045,7 @@ an internal database.
 .I VOLUME
 The volume gain in dB (default 0).
 The gain is a positive value from 0 to 40.
-If the \(oqsound_normalize\(cq option is active the
+If the \`sound_normalize\' option is active the
 volume is automatically updated in the game
 play.
 .PD
@@ -2068,8 +2068,8 @@ sound_normalize yes | no
 .PD
 .PP
 Precisely, the program continously measures the normalized
-sound power adjusting it with the Fletcher\(hyMunson \(a"Equal
-Loudness Courve\(a" at 80 dB to remove inaudible frequencies.
+sound power adjusting it with the Fletcher\-Munson \[dq]Equal
+Loudness Courve\[dq] at 80 dB to remove inaudible frequencies.
 It tries to keep constant the 95% median power of the
 last 3 minutes.
 .PP
@@ -2095,7 +2095,7 @@ Disable it.
 .RE
 .SS sound_equalizer_* 
 Sets the equalizer volume. To disable the equalizer set
-all the VOLUME values to 0. The cut\(hyoff frequencies are 800
+all the VOLUME values to 0. The cut\-off frequencies are 800
 and 8000 Hz.
 .PP
 sound_equalizer_lowvolume VOLUME
@@ -2108,7 +2108,7 @@ Options:
 .HP 4
 .I VOLUME
 The volume gain in dB (default 0).
-The gain is a integer value from \(hy20 to 20.
+The gain is a integer value from \-20 to 20.
 .PD
 .RE
 .SS sound_latency 
@@ -2138,8 +2138,8 @@ input.
 .SS device_keyboard/joystick/mouse_* 
 These options are used to customize the input drivers.
 .PP
-All the \(oqdevice_keyboard/joystick/mouse_*\(cq options defined in
-the \(oqadvdev.txt\(cq file can be used.
+All the \`device_keyboard/joystick/mouse_*\' options defined in
+the \`advdev.txt\' file can be used.
 .SS input_steadykey 
 Helps recognition of very long key sequences. But slows a bit
 the key recognition.
@@ -2229,16 +2229,16 @@ never exits automatically.
 Changes the analog control mapping. Maps joystick, trackball
 and mouse controls on a player analog control.
 .PP
-input_map[ANALOG] auto | [[\(hy]joystick[JOY,CONTROL,AXE]]
+input_map[ANALOG] auto | [[\-]joystick[JOY,CONTROL,AXE]]
 .PD 0
 .PP
 .PD
-	[[\(hy]mouse[MOUSE,AXE]] [[\(hy]joystick_ball[JOY,AXE]] ...
+	[[\-]mouse[MOUSE,AXE]] [[\-]joystick_ball[JOY,AXE]] ...
 .PD 0
 .PP
 .PD
 .PP
-The default is always \(oqauto\(cq.
+The default is always \`auto\'.
 .PP
 Options:
 .RS 4
@@ -2263,7 +2263,7 @@ p1_trackbally, p2_trackbally, p3_trackbally, p4_trackbally,
 p1_mousex, p2_mousex, p3_mousex, p4_mousex,
 p1_mousey, p2_mousey, p3_mousey, p4_mousey.
 .HP 4
-.I \(hy
+.I \-
 Invert the direction of the movement.
 .HP 4
 .I JOY
@@ -2281,23 +2281,23 @@ control: 0, 1, 2, 3 ...
 .PD
 .RE
 .PP
-The \(oqjoystick\(cq option is used to reference all the analog
+The \`joystick\' option is used to reference all the analog
 controls which report an absolute position. For example
 stick, lightgun, steering wheel, pedal, throttle and rudder controls.
 .PP
-The \(oqjoystick_ball\(cq and \(oqmouse\(cq options are used to reference
+The \`joystick_ball\' and \`mouse\' options are used to reference
 all the analog controls which reports a relative position. For
 example trackball, dial and mouse controls.
-The option \(oqjoystick_ball\(cq is for joystick devices which
-have other relative analog controls. The option \(oqmouse\(cq is
+The option \`joystick_ball\' is for joystick devices which
+have other relative analog controls. The option \`mouse\' is
 for mouse devices which have only relative analog controls.
 .PP
 The exact CONTROL and AXE names can be checked interactively
-using the \(oqadvj\(cq and \(oqadvm\(cq utility. \(oqadvj\(cq is used for
-\(oqjoystick[]\(cq and \(oqjoystick_ball[]\(cq specifications. \(oqadvm\(cq is
-used for \(oqmouse[]\(cq specifications.
+using the \`advj\' and \`advm\' utility. \`advj\' is used for
+\`joystick[]\' and \`joystick_ball[]\' specifications. \`advm\' is
+used for \`mouse[]\' specifications.
 .PP
-The CONTROL names for the \(oqjoystick\(cq option are:
+The CONTROL names for the \`joystick\' option are:
 .RS 4
 .PD 0
 .HP 4
@@ -2327,7 +2327,7 @@ Any other.
 .PD
 .RE
 .PP
-The AXE names for the \(oqjoystick\(cq option are:
+The AXE names for the \`joystick\' option are:
 .RS 4
 .PD 0
 .HP 4
@@ -2342,7 +2342,7 @@ For all the control with a single axe.
 .PD
 .RE
 .PP
-The AXE names for the \(oqjoystick_ball\(cq and \(oqmouse\(cq
+The AXE names for the \`joystick_ball\' and \`mouse\'
 options are:
 .RS 4
 .PD 0
@@ -2364,8 +2364,8 @@ Any other.
 .PD
 .RE
 .PP
-The ANALOG controls are always formed with a \(a"player\(a" string
-and with a \(a"control\(a" strings.
+The ANALOG controls are always formed with a \[dq]player\[dq] string
+and with a \[dq]control\[dq] strings.
 .RS 4
 .PD 0
 .HP 4
@@ -2434,19 +2434,19 @@ Mouse in vertical direction.
 Examples:
 .PP
 .RS 4
-input_map[p1_stickx] joystick[0,0,x] \(hyjoystick[0,1,x]
+input_map[p1_stickx] joystick[0,0,x] \-joystick[0,1,x]
 .PD 0
 .PP
 .PD
-input_map[p1_sticky] joystick[0,0,y] \(hyjoystick[0,1,y]
+input_map[p1_sticky] joystick[0,0,y] \-joystick[0,1,y]
 .PD 0
 .PP
 .PD
-input_map[p1_trackballx] mouse[0,x] \(hymouse[1,x]
+input_map[p1_trackballx] mouse[0,x] \-mouse[1,x]
 .PD 0
 .PP
 .PD
-input_map[p1_trackbally] mouse[0,y] \(hymouse[1,y]
+input_map[p1_trackbally] mouse[0,y] \-mouse[1,y]
 .PD 0
 .PP
 .PD
@@ -2460,7 +2460,7 @@ input_map[p1_stickx] mouse[0,x] mouse[0,y]
 .PD 0
 .PP
 .PD
-input_map[p1_sticky] mouse[0,x] \(hymouse[0,y]
+input_map[p1_sticky] mouse[0,x] \-mouse[0,y]
 .PD 0
 .PP
 .PD
@@ -2487,7 +2487,7 @@ input_map[DIGITAL] auto | keyboard[KEYBOARD,KEY]
 .PP
 .PD
 .PP
-The default is always \(oqauto\(cq which uses the standard mapping.
+The default is always \`auto\' which uses the standard mapping.
 The previous mapping is always overwritten.
 .PP
 Options:
@@ -2644,7 +2644,7 @@ key_f19, key_f20, key_f21, key_f22, key_f23, key_f24.
 Note that the p*_start, p*_select and key_* controls are avaiable
 only in MESS.
 .PP
-The MOUSE_BUTTON names can be checked using the \(oqadvm\(cq utility.
+The MOUSE_BUTTON names can be checked using the \`advm\' utility.
 Generally they are:
 .RS 4
 .PD 0
@@ -2669,7 +2669,7 @@ Misc buttons.
 .PD
 .RE
 .PP
-The KEY names can be checked using the \(oqadvk\(cq utility.
+The KEY names can be checked using the \`advk\' utility.
 Generally they are:
 .PP
 .RS 4
@@ -2696,9 +2696,9 @@ brightnessup, macro, mute, volumedown, volumeup, power, compose,
 f13, f14, f15, f16, f17, f18, f19, f20, f21, f22, f23, f24.
 .RE
 .PP
-You can also specify a numerical scancode N in the form: \(oqscanN\(cq.
+You can also specify a numerical scancode N in the form: \`scanN\'.
 .PP
-The JOY_BUTTON button names can be checked using the \(oqadvj\(cq utility.
+The JOY_BUTTON button names can be checked using the \`advj\' utility.
 Generally they are:
 .RS 4
 .PD 0
@@ -2850,7 +2850,7 @@ input_name joystick_digital[0,stick,x,right] Right
 .RE
 .SS input_setting[*] 
 Selects some additional settings for analog inputs. These
-settings can be modified using the \(a"Analog Config\(a" menu
+settings can be modified using the \[dq]Analog Config\[dq] menu
 present if the game has analog controls.
 .PP
 input_setting[NAME] SETTING
@@ -2859,7 +2859,7 @@ input_setting[NAME] SETTING
 .PD
 .SS input_dipswitch[*] 
 Selects the state of the game dipswitch. These settings can be
-modified using the \(a"Dipswitch\(a" menu present if the game has
+modified using the \[dq]Dipswitch\[dq] menu present if the game has
 dipswitches.
 .PP
 input_dipswitch[NAME] SETTING
@@ -2868,7 +2868,7 @@ input_dipswitch[NAME] SETTING
 .PD
 .SS input_configswitch[*] 
 Selects the state of the game configswitch. These settings can
-be modified using the \(a"Config\(a" menu present if the game has
+be modified using the \[dq]Config\[dq] menu present if the game has
 configswitches.
 .PP
 input_configswitch[NAME] SETTING
@@ -2902,7 +2902,7 @@ Load an arbitrary image from a file.
 .PD
 .RE
 .PP
-The data used for the default image is in the \(oqcontrib/help\(cq dir.
+The data used for the default image is in the \`contrib/help\' dir.
 .SS ui_helptag 
 Selects the highlight range for any digital input. When the user
 press a key/button the related range is highlighted.
@@ -2994,13 +2994,13 @@ ui_helptag keyboard[0,f10] 149 5 12 12
 .PD
 .RE
 .PP
-The data used for the default image is in the \(oqcontrib/help\(cq dir.
+The data used for the default image is in the \`contrib/help\' dir.
 .SS ui_font 
 Selects a font file. The formats TrueType (TTF), GRX, PSF and
 RAW are supported. You can find a collection of fonts in the
-\(oqcontrib\(cq directory.
+\`contrib\' directory.
 .PP
-ui_font auto | \(a"FILE\(a"
+ui_font auto | \[dq]FILE\[dq]
 .PD 0
 .PP
 .PD
@@ -3010,7 +3010,7 @@ Options:
 .PD 0
 .HP 4
 .I auto
-Use the built\(hyin font (default).
+Use the built\-in font (default).
 .HP 4
 .I FILE
 Font file path.
@@ -3040,7 +3040,7 @@ Automatically compute the size (default).
 Number of text rows.
 .HP 4
 .I COLS
-Number of text columns. If omitted, it\(cqs computed from
+Number of text columns. If omitted, it\'s computed from
 the number of rows.
 .PD
 .RE
@@ -3113,8 +3113,8 @@ modes.
 This section describes the options used for the recording
 features.
 .PP
-To start the recording press \(oqleft_ctrl+enter\(cq. To end the
-recording and to save the clip press \(oqenter\(cq. If you press the
+To start the recording press \`left_ctrl+enter\'. To end the
+recording and to save the clip press \`enter\'. If you press the
 start key more than one time the recording starts from the
 last press.
 .SS record_sound 
@@ -3125,10 +3125,10 @@ record_sound yes | no
 .PP
 .PD
 .PP
-The sound clip is saved in the \(oqdir_snap\(cq directory (like the
-snapshot images) in \(oq.wav\(cq format. Specifically the \(oqWAV PCM
-16 bit\(cq format is used. The sample rate used is the same sample
-rate specified with the \(oqsound_samplerate\(cq option.
+The sound clip is saved in the \`dir_snap\' directory (like the
+snapshot images) in \`.wav\' format. Specifically the \`WAV PCM
+16 bit\' format is used. The sample rate used is the same sample
+rate specified with the \`sound_samplerate\' option.
 .PP
 The clip is saved without compression and without any volume
 adjustment. You should use an external utility to adjust the
@@ -3141,14 +3141,14 @@ record_video yes | no
 .PP
 .PD
 .PP
-The video clip is saved in the \(oqdir_snap\(cq directory (like the
-snapshot images) in \(oq.mng\(cq format. The \(oqMNG\(hyLC\(cq (Low Complexity)
+The video clip is saved in the \`dir_snap\' directory (like the
+snapshot images) in \`.mng\' format. The \`MNG\-LC\' (Low Complexity)
 subformat is used.
 .PP
 The clip is saved with a lite compression, you should use an
 external utility to compress better the resulting file.
 .PP
-A powerful compression utility is the \(oqadvmng\(cq program
+A powerful compression utility is the \`advmng\' program
 available in the AdvanceCOMP package.
 .SS record_video/sound_time 
 Controls the maximum length in seconds of the recording feature.
@@ -3247,8 +3247,8 @@ sync_speed 1.2
 .PD
 .RE
 .SS sync_turbospeed 
-Selects the speed factor used when the \(oqturbo\(cq button is
-pressed. The default \(oqturbo\(cq key is \(oqasterisk_pad\(cq.
+Selects the speed factor used when the \`turbo\' button is
+pressed. The default \`turbo\' key is \`asterisk_pad\'.
 .PP
 sync_turbospeed FACTOR
 .PD 0
@@ -3265,9 +3265,9 @@ Float speed factor (default 3.0).
 .RE
 .SS sync_startuptime 
 Selects the time in seconds of the duration of the startup
-speed up. You can press the \(oqstartup\(cq key to save the current
-game time as startup time. The default \(oqstartup\(cq key
-is \(oqminus_pad\(cq.
+speed up. You can press the \`startup\' key to save the current
+game time as startup time. The default \`startup\' key
+is \`minus_pad\'.
 .PP
 sync_startuptime auto | none | TIME
 .PD 0
@@ -3302,8 +3302,8 @@ Options:
 .PD 0
 .HP 4
 .I auto
-Select automatically, at present it\(cqs always
-the \(oqinternal\(cq mode (default).
+Select automatically, at present it\'s always
+the \`internal\' mode (default).
 .HP 4
 .I emulation
 Change the emulation to produce the requested
@@ -3315,22 +3315,22 @@ current speed.
 .PD
 .RE
 .PP
-Note that the \(oqemulation\(cq mode may result in wrong input recording
-using the \(oq\(hyrecord\(cq or \(oq\(hyplayback\(cq command line option due incorrect
+Note that the \`emulation\' mode may result in wrong input recording
+using the \`\-record\' or \`\-playback\' command line option due incorrect
 behavior of the emulation. Specifically some implementations may
 depend on the number of audio sample requested, information that
 is not stored in the recorded input file.
 .PP
-Also, the \(oqemulation\(cq mode may trigger some bugs in the MAME
+Also, the \`emulation\' mode may trigger some bugs in the MAME
 core.
 .PP
-Anyway, the \(oqemulation\(cq mode generates more stable sound
-if the CPU load isn\(cqt totally empty.
+Anyway, the \`emulation\' mode generates more stable sound
+if the CPU load isn\'t totally empty.
 .SS LCD Configuration Options 
 AdvanceMAME is able to display arbitrary information on a LCD display
 using the integrated script capabilities.
 .PP
-To use the LCD support you must install on your system the \(oqlcdproc\(cq
+To use the LCD support you must install on your system the \`lcdproc\'
 program available at:
 .PP
 .RS 4
@@ -3341,7 +3341,7 @@ http://lcdproc.sourceforge.net/
 .RE
 .PP
 More details and some examples of how to display information on the LCD
-using the scripts are in the \(oqscript.txt\(cq documentation file.
+using the scripts are in the \`script.txt\' documentation file.
 .SS lcd_server 
 Selects the server address and port to use for display information on
 the LCD.
@@ -3356,10 +3356,10 @@ Options:
 Disable the LCD support (default).
 .HP 4
 .I SERVER
-Address of the server. If omitted \(oqlocalhost\(cq is used.
+Address of the server. If omitted \`localhost\' is used.
 .HP 4
 .I PORT
-Port of the server. If omitted \(oq13666\(cq is used.
+Port of the server. If omitted \`13666\' is used.
 .PD
 .RE
 .PP
@@ -3433,8 +3433,8 @@ Options:
 Automatic (default).
 .HP 4
 .I SIZE
-Size of the RAM in bytes. You can use the \(cqk\(cq (1024),
-\(cqM\(cq (1024^2) or \(cqG\(cq (1024^3) multiplier.
+Size of the RAM in bytes. You can use the \'k\' (1024),
+\'M\' (1024^2) or \'G\' (1024^3) multiplier.
 .PD
 .RE
 .PP
@@ -3460,7 +3460,7 @@ Options:
 .PD 0
 .HP 4
 .I none
-Don\(cqt change the default difficulty (default).
+Don\'t change the default difficulty (default).
 .HP 4
 .I easiest
 Easiest game play.
@@ -3493,7 +3493,7 @@ Options:
 .PD 0
 .HP 4
 .I no
-Don\(cqt change the default mode (default).
+Don\'t change the default mode (default).
 .HP 4
 .I yes
 Activate the freeplay.
@@ -3514,7 +3514,7 @@ Options:
 .PD 0
 .HP 4
 .I no
-Don\(cqt change the default mode (default).
+Don\'t change the default mode (default).
 .HP 4
 .I yes
 Mute the demo sounds.
@@ -3543,33 +3543,33 @@ Options:
 .PD 0
 .HP 4
 .I none
-Don\(cqt change the language (default).
+Don\'t change the language (default).
 .HP 4
 .I LANG
 If available select this language.
 .PD
 .RE
 .PP
-For example if you run \(oqcadash\(cq with \(oq\(hylang italy\(cq it\(cqs
-run the clone \(oqcadashi\(cq. If you run \(oqcheesech\(cq with
-\(oq\(hylang germany\(cq it\(cqs run \(oqcheesech\(cq setting the \(oqLanguage\(cq
-dipswitch to \(oqGerman\(cq.
+For example if you run \`cadash\' with \`\-lang italy\' it\'s
+run the clone \`cadashi\'. If you run \`cheesech\' with
+\`\-lang germany\' it\'s run \`cheesech\' setting the \`Language\'
+dipswitch to \`German\'.
 .PP
 If the specified language is not available, european and
 american languages fallback to english language.
 Asian languages fallback to japanese language.
 .PP
-A game clone is selected only if it\(cqs a perfectly working
+A game clone is selected only if it\'s a perfectly working
 clone.
 .SS misc_smp 
-Enables the \(a"Symmetric Multi\(hyProcessing\(a" (SMP).
+Enables the \[dq]Symmetric Multi\-Processing\[dq] (SMP).
 This option uses two concurrent threads. One for MAME and one
 for updating the screen.
 The final blit stage in video memory is completely done by the
 second thread. This behavior requires a complete bitmap redraw
-by MAME for the games that don\(cqt already do it.
+by MAME for the games that don\'t already do it.
 Generally you get a big speed improvement only if you are using
-a heavy video effect like \(oqhq\(cq and \(oqxbr\(cq.
+a heavy video effect like \`hq\' and \`xbr\'.
 .PP
 misc_smp yes | no
 .PD 0
@@ -3590,7 +3590,7 @@ Enabled.
 .PP
 You can enable or disable it also on the runtime Video menu.
 .SS misc_quiet 
-Doesn\(cqt print the copyright text message at the startup, the
+Doesn\'t print the copyright text message at the startup, the
 disclaimer and the generic game information screens.
 .PP
 misc_quiet yes | no
@@ -3633,7 +3633,7 @@ DOS and Windows or in the $data or $home directories
 for Linux a Mac OS X.
 .SS misc_cheat 
 Enables or disables the cheat system. It may also change the
-game behavior enabling the cheat dip\(hyswitch if available.
+game behavior enabling the cheat dip\-switch if available.
 If enabled, it disables the hiscore saving.
 .PP
 misc_cheat yes | no
@@ -3654,8 +3654,8 @@ Disable the cheats (default).
 .RE
 .SS misc_cheatfile 
 Selects the cheat files. In DOS and Windows use the
-\(oq;\(cq char as file separator. In Linux and Mac OS X use
-the \(oq:\(cq char.
+\`;\' char as file separator. In Linux and Mac OS X use
+the \`:\' char.
 .PP
 misc_cheatfile FILE[;FILE]... (DOS, Windows)
 .PD 0
@@ -3727,7 +3727,7 @@ Enabled (default).
 .PD
 .RE
 .PP
-If the file \(oqevent.dat\(cq (specified with the \(oqmisc_eventfile\(cq
+If the file \`event.dat\' (specified with the \`misc_eventfile\'
 option) is found the exit menu is shown only
 if one or more coins are inserted or if you are playing.
 .SS misc_eventdebug 
@@ -3786,10 +3786,10 @@ Options:
 .PD 0
 .HP 4
 .I no
-Don\(cqt crash the program (default).
+Don\'t crash the program (default).
 .HP 4
 .I yes
-Add a \(a"Crash\(a" menu entry in the video menu.
+Add a \[dq]Crash\[dq] menu entry in the video menu.
 If selected the program crash with a Segmentation
 Fault.
 .PD
@@ -3816,7 +3816,7 @@ Sound output without any syncronization.
 .SS debug_speedmark 
 Enables or disabled the on screen speed mark. If enabled a red square
 is displayed if the game is too slow. A red triangle when you press
-the \(oqturbo\(cq key or when the game is accelerated for other reasons.
+the \`turbo\' key or when the game is accelerated for other reasons.
 .PP
 debug_speedmark yes | no
 .PD 0
@@ -3831,7 +3831,7 @@ Options:
 Display the speed mark when required.
 .HP 4
 .I no
-Don\(cqt display the speed mark (default).
+Don\'t display the speed mark (default).
 .PD
 .RE
 .SH SIGNALS 

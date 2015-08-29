@@ -21,10 +21,10 @@ to the version of AdvanceMAME that it was shipped with.
 
 The latest version of the FAQ is included with the latest version
 of AdvanceMAME, available for download from the project homepage
-http://advancemame.sourceforge.net/.
+http://www.advancemame.it/.
 
 The latest version of the FAQ is also available online at
-http://advancemame.sourceforge.net/doc-faq.html.
+http://www.advancemame.it/doc-faq.html.
 
 1.3 What is MAME ?
 ------------------

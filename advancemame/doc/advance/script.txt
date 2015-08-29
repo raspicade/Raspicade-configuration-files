@@ -65,7 +65,7 @@ Examples:
 The values can be combined in expressions using some operators.
 
 For numerical values the following operators are available:
-    + - Addition.
+     - Addition.
     - - Subtraction.
     & - Bitwise and.
     | - Bitwise or.
@@ -81,7 +81,7 @@ For numerical values the following operators are available:
     >= - Greater or equal.
 
 For string values the following operators are available:
-    + - Concatenation.
+     - Concatenation.
 
 
 5 COMMANDS
