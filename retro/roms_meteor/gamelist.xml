@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<gameList>
-	<game>
-		<path>./shooter.gba</path>
-		<name>shooter</name>
-		<desc>No Description Available.</desc>
-		<image>./no_image.png</image>
-	</game>
-</gameList>
